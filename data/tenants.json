@@ -1,0 +1,145 @@
+{
+  "categories": {
+    "fashion": { "label": "Fashion", "color": "#EC4899", "emoji": "👗" },
+    "fnb": { "label": "Makanan & Minuman", "color": "#FF7A45", "emoji": "🍽" },
+    "elektronik": { "label": "Elektronik", "color": "#0EA5E9", "emoji": "🔌" },
+    "hiburan": { "label": "Hiburan", "color": "#8B5CF6", "emoji": "🎬" },
+    "layanan": { "label": "Layanan", "color": "#14B8A6", "emoji": "🏦" },
+    "buku": { "label": "Buku & Alat Tulis", "color": "#F59E0B", "emoji": "📚" },
+    "olahraga": { "label": "Olahraga", "color": "#22C55E", "emoji": "⚽" }
+  },
+  "items": [
+    {
+      "id": "uniqlo",
+      "name": "Uniqlo",
+      "category": "fashion",
+      "floor": "1",
+      "nodeId": "n_uniqlo",
+      "x": 250, "y": 210,
+      "hours": "10:00 - 22:00",
+      "rating": 4.7,
+      "description": "Pakaian kasual pria, wanita, dan anak dengan konsep LifeWear."
+    },
+    {
+      "id": "hnm",
+      "name": "H&M",
+      "category": "fashion",
+      "floor": "1",
+      "nodeId": "n_hnm",
+      "x": 330, "y": 210,
+      "hours": "10:00 - 22:00",
+      "rating": 4.5,
+      "description": "Fashion trendi untuk seluruh keluarga dengan harga terjangkau."
+    },
+    {
+      "id": "starbucks",
+      "name": "Starbucks Coffee",
+      "category": "fnb",
+      "floor": "1",
+      "nodeId": "n_starbucks",
+      "x": 700, "y": 210,
+      "hours": "08:00 - 22:00",
+      "rating": 4.6,
+      "description": "Kedai kopi premium dengan area duduk nyaman untuk bekerja atau bersantai."
+    },
+    {
+      "id": "bankmandiri",
+      "name": "Bank Mandiri",
+      "category": "layanan",
+      "floor": "1",
+      "nodeId": "n_bank",
+      "x": 700, "y": 495,
+      "hours": "09:00 - 16:00",
+      "rating": 4.2,
+      "description": "Kantor cabang layanan perbankan dan setor tunai."
+    },
+    {
+      "id": "gramedia",
+      "name": "Gramedia",
+      "category": "buku",
+      "floor": "2",
+      "nodeId": "n_gramedia",
+      "x": 250, "y": 210,
+      "hours": "10:00 - 22:00",
+      "rating": 4.8,
+      "description": "Toko buku, alat tulis, dan perlengkapan sekolah terlengkap."
+    },
+    {
+      "id": "electroniccity",
+      "name": "Electronic City",
+      "category": "elektronik",
+      "floor": "2",
+      "nodeId": "n_electroniccity",
+      "x": 330, "y": 210,
+      "hours": "10:00 - 22:00",
+      "rating": 4.4,
+      "description": "Gadget, elektronik rumah tangga, dan aksesoris terbaru."
+    },
+    {
+      "id": "xxi",
+      "name": "XXI Cinema",
+      "category": "hiburan",
+      "floor": "2",
+      "nodeId": "n_cinema",
+      "x": 700, "y": 210,
+      "hours": "10:00 - 23:30",
+      "rating": 4.7,
+      "description": "Bioskop dengan teknologi layar dan suara terkini."
+    },
+    {
+      "id": "sportstation",
+      "name": "Sport Station",
+      "category": "olahraga",
+      "floor": "2",
+      "nodeId": "n_sportstation",
+      "x": 700, "y": 495,
+      "hours": "10:00 - 22:00",
+      "rating": 4.5,
+      "description": "Perlengkapan dan sepatu olahraga dari berbagai brand ternama."
+    },
+    {
+      "id": "esteler77",
+      "name": "Es Teler 77",
+      "category": "fnb",
+      "floor": "3",
+      "nodeId": "n_esteler",
+      "x": 480, "y": 165,
+      "hours": "10:00 - 22:00",
+      "rating": 4.5,
+      "description": "Es teler, jus, dan hidangan Indonesia di area food court."
+    },
+    {
+      "id": "hokben",
+      "name": "Hokben",
+      "category": "fnb",
+      "floor": "3",
+      "nodeId": "n_hokben",
+      "x": 550, "y": 130,
+      "hours": "10:00 - 22:00",
+      "rating": 4.6,
+      "description": "Hidangan bento ala Jepang, favorit keluarga."
+    },
+    {
+      "id": "pizzahut",
+      "name": "Pizza Hut",
+      "category": "fnb",
+      "floor": "3",
+      "nodeId": "n_pizzahut",
+      "x": 620, "y": 130,
+      "hours": "10:00 - 22:00",
+      "rating": 4.3,
+      "description": "Pizza, pasta, dan hidangan keluarga dalam suasana santai."
+    },
+    {
+      "id": "jco",
+      "name": "J.CO Donuts & Coffee",
+      "category": "fnb",
+      "floor": "3",
+      "nodeId": "n_jco",
+      "x": 640, "y": 205,
+      "hours": "08:00 - 22:00",
+      "rating": 4.7,
+      "description": "Donat premium dan kopi khas J.CO."
+    }
+  ]
+}

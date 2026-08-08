@@ -1,0 +1,8 @@
+{
+  "items": [
+    { "code": "lobby_utama", "label": "Lobby Utama", "floor": "1", "nodeId": "n_lobby" },
+    { "code": "pintu_selatan", "label": "Pintu Selatan", "floor": "1", "nodeId": "n_pintu_selatan" },
+    { "code": "eskalator_timur", "label": "Eskalator Timur Lt.1", "floor": "1", "nodeId": "n_esc1" },
+    { "code": "area_parkir_b1", "label": "Pintu Area Parkir", "floor": "1", "nodeId": "n_pintu_parkir" }
+  ]
+}

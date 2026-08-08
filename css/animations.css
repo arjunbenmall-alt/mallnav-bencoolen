@@ -1,0 +1,47 @@
+/* ==========================================================================
+   MallNav — Animations & Transitions
+   ========================================================================== */
+
+.theme-toggle svg { transition: transform var(--dur-slow) var(--ease-standard); }
+[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+[data-theme="light"] .theme-toggle .icon-moon,
+:root:not([data-theme]) .theme-toggle .icon-moon { display: none; }
+
+.pop-in { animation: popIn var(--dur-base) var(--ease-decel); }
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.92) translateY(6px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.slide-up-in { animation: slideUpIn var(--dur-slow) var(--ease-decel); }
+@keyframes slideUpIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, var(--surface-sunken) 25%, var(--outline) 37%, var(--surface-sunken) 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+@keyframes shimmer {
+  0% { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}
+
+/* Compass dummy needle */
+.compass-needle { transition: transform var(--dur-base) var(--ease-standard); transform-origin: 50% 50%; }
+
+/* Quick action tap bounce driven from JS via .is-tapped */
+.quick-action.is-tapped { animation: qaBounce 260ms var(--ease-standard); }
+@keyframes qaBounce {
+  0% { transform: scale(1); }
+  40% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+/* Search result stagger-in */
+.search-result.pop-in { animation-fill-mode: both; }
+
+/* Toast icon check pop */
+.toast-icon-pop { display: inline-flex; animation: popIn 280ms var(--ease-decel); }
