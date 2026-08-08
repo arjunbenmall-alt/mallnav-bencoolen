@@ -1,145 +1,136 @@
 {
   "categories": {
-    "fashion": { "label": "Fashion", "color": "#EC4899", "emoji": "👗" },
-    "fnb": { "label": "Makanan & Minuman", "color": "#FF7A45", "emoji": "🍽" },
-    "elektronik": { "label": "Elektronik", "color": "#0EA5E9", "emoji": "🔌" },
-    "hiburan": { "label": "Hiburan", "color": "#8B5CF6", "emoji": "🎬" },
-    "layanan": { "label": "Layanan", "color": "#14B8A6", "emoji": "🏦" },
-    "buku": { "label": "Buku & Alat Tulis", "color": "#F59E0B", "emoji": "📚" },
-    "olahraga": { "label": "Olahraga", "color": "#22C55E", "emoji": "⚽" }
+    "fashion": { "label": "Fashion & Accessories", "color": "#EC4899", "emoji": "\uD83D\uDC57" },
+    "fnb": { "label": "Food & Beverage", "color": "#FF7A45", "emoji": "\uD83C\uDF7D" },
+    "elektronik": { "label": "Gadget & Electronic", "color": "#0EA5E9", "emoji": "\uD83D\uDD0C" },
+    "hiburan": { "label": "Kids & Entertainment", "color": "#8B5CF6", "emoji": "\uD83C\uDFAC" },
+    "kecantikan": { "label": "Beauty & Health", "color": "#F43F5E", "emoji": "\uD83D\uDC84" },
+    "rumahtangga": { "label": "Home Appliance", "color": "#B45309", "emoji": "\uD83D\uDECB" },
+    "supermarket": { "label": "Supermarket & Department Store", "color": "#0D9488", "emoji": "\uD83D\uDED2" },
+    "travel": { "label": "Travel & Lifestyle", "color": "#6366F1", "emoji": "\u2708" }
   },
   "items": [
     {
-      "id": "uniqlo",
-      "name": "Uniqlo",
+      "id": "kimfashion",
+      "name": "Kim Fashion",
       "category": "fashion",
       "floor": "1",
       "nodeId": "n_uniqlo",
       "x": 250, "y": 210,
       "hours": "10:00 - 22:00",
-      "rating": 4.7,
-      "description": "Pakaian kasual pria, wanita, dan anak dengan konsep LifeWear."
+      "rating": 4.5,
+      "description": "Fashion pria dan wanita dengan pilihan model terkini. Ground Floor Blok B No.19."
     },
     {
-      "id": "hnm",
-      "name": "H&M",
+      "id": "moc",
+      "name": "MOC",
       "category": "fashion",
       "floor": "1",
       "nodeId": "n_hnm",
       "x": 330, "y": 210,
       "hours": "10:00 - 22:00",
-      "rating": 4.5,
-      "description": "Fashion trendi untuk seluruh keluarga dengan harga terjangkau."
+      "rating": 4.4,
+      "description": "Brand fashion kasual untuk tampilan sehari-hari yang stylish."
     },
     {
-      "id": "starbucks",
-      "name": "Starbucks Coffee",
-      "category": "fnb",
+      "id": "samsung",
+      "name": "Samsung",
+      "category": "elektronik",
       "floor": "1",
       "nodeId": "n_starbucks",
       "x": 700, "y": 210,
-      "hours": "08:00 - 22:00",
-      "rating": 4.6,
-      "description": "Kedai kopi premium dengan area duduk nyaman untuk bekerja atau bersantai."
+      "hours": "10:00 - 22:00",
+      "rating": 4.7,
+      "description": "Smartphone, gadget, dan elektronik resmi Samsung. Ground Floor Blok B No.9 & 10."
     },
     {
-      "id": "bankmandiri",
-      "name": "Bank Mandiri",
-      "category": "layanan",
+      "id": "erafone",
+      "name": "Erafone",
+      "category": "elektronik",
+      "floor": "1",
+      "nodeId": "n_erafone",
+      "x": 180, "y": 495,
+      "hours": "10:00 - 22:00",
+      "rating": 4.5,
+      "description": "Gerai ponsel dan aksesoris multi-brand. Ground Floor Blok C No.15 & 16."
+    },
+    {
+      "id": "omegatour",
+      "name": "Omega Tour & Travel",
+      "category": "travel",
       "floor": "1",
       "nodeId": "n_bank",
       "x": 700, "y": 495,
-      "hours": "09:00 - 16:00",
-      "rating": 4.2,
-      "description": "Kantor cabang layanan perbankan dan setor tunai."
+      "hours": "09:00 - 17:00",
+      "rating": 4.3,
+      "description": "Layanan tiket perjalanan, tur, dan paket wisata. Ground Floor Blok A No.1."
     },
     {
-      "id": "gramedia",
-      "name": "Gramedia",
-      "category": "buku",
+      "id": "ramen1",
+      "name": "Ramen 1 Indonesia",
+      "category": "fnb",
+      "floor": "1",
+      "nodeId": "n_ramen1",
+      "x": 620, "y": 645,
+      "hours": "10:00 - 22:00",
+      "rating": 4.6,
+      "description": "Ramen otentik ala Jepang di Area Bencoolen Hot Spot, Blok B No.5 & 6.",
+      "aliases": ["kuliner", "makanan", "food", "resto", "restoran", "ramen"]
+    },
+    {
+      "id": "matahari",
+      "name": "Matahari",
+      "category": "supermarket",
       "floor": "2",
       "nodeId": "n_gramedia",
       "x": 250, "y": 210,
       "hours": "10:00 - 22:00",
-      "rating": 4.8,
-      "description": "Toko buku, alat tulis, dan perlengkapan sekolah terlengkap."
+      "rating": 4.6,
+      "description": "Department store fashion dan kebutuhan keluarga terlengkap di 1st Floor."
     },
     {
-      "id": "electroniccity",
-      "name": "Electronic City",
-      "category": "elektronik",
+      "id": "ourselfstudio",
+      "name": "Our Self Studio",
+      "category": "hiburan",
       "floor": "2",
       "nodeId": "n_electroniccity",
       "x": 330, "y": 210,
       "hours": "10:00 - 22:00",
-      "rating": 4.4,
-      "description": "Gadget, elektronik rumah tangga, dan aksesoris terbaru."
+      "rating": 4.7,
+      "description": "Studio self-photo kekinian di area Bencoolen Hot Spot, 1st Floor."
     },
     {
-      "id": "xxi",
-      "name": "XXI Cinema",
-      "category": "hiburan",
+      "id": "mrdiy",
+      "name": "MR DIY",
+      "category": "rumahtangga",
       "floor": "2",
       "nodeId": "n_cinema",
       "x": 700, "y": 210,
-      "hours": "10:00 - 23:30",
-      "rating": 4.7,
-      "description": "Bioskop dengan teknologi layar dan suara terkini."
-    },
-    {
-      "id": "sportstation",
-      "name": "Sport Station",
-      "category": "olahraga",
-      "floor": "2",
-      "nodeId": "n_sportstation",
-      "x": 700, "y": 495,
       "hours": "10:00 - 22:00",
       "rating": 4.5,
-      "description": "Perlengkapan dan sepatu olahraga dari berbagai brand ternama."
+      "description": "Perlengkapan rumah tangga, dekorasi, dan kebutuhan harian serba ada."
     },
     {
-      "id": "esteler77",
-      "name": "Es Teler 77",
-      "category": "fnb",
+      "id": "azko",
+      "name": "AZ.KO",
+      "category": "rumahtangga",
       "floor": "3",
-      "nodeId": "n_esteler",
-      "x": 480, "y": 165,
+      "nodeId": "n_azko",
+      "x": 550, "y": 210,
       "hours": "10:00 - 22:00",
       "rating": 4.5,
-      "description": "Es teler, jus, dan hidangan Indonesia di area food court."
+      "description": "Perabotan rumah tangga lengkap dan modern di 2nd Floor."
     },
     {
-      "id": "hokben",
-      "name": "Hokben",
-      "category": "fnb",
+      "id": "informa",
+      "name": "INFORMA",
+      "category": "rumahtangga",
       "floor": "3",
-      "nodeId": "n_hokben",
-      "x": 550, "y": 130,
+      "nodeId": "n_informa",
+      "x": 700, "y": 210,
       "hours": "10:00 - 22:00",
       "rating": 4.6,
-      "description": "Hidangan bento ala Jepang, favorit keluarga."
-    },
-    {
-      "id": "pizzahut",
-      "name": "Pizza Hut",
-      "category": "fnb",
-      "floor": "3",
-      "nodeId": "n_pizzahut",
-      "x": 620, "y": 130,
-      "hours": "10:00 - 22:00",
-      "rating": 4.3,
-      "description": "Pizza, pasta, dan hidangan keluarga dalam suasana santai."
-    },
-    {
-      "id": "jco",
-      "name": "J.CO Donuts & Coffee",
-      "category": "fnb",
-      "floor": "3",
-      "nodeId": "n_jco",
-      "x": 640, "y": 205,
-      "hours": "08:00 - 22:00",
-      "rating": 4.7,
-      "description": "Donat premium dan kopi khas J.CO."
+      "description": "Furnitur dan perlengkapan rumah modern, dari ruang tamu sampai kamar tidur."
     }
   ]
 }

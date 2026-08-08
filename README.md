@@ -151,7 +151,7 @@ sambungkan dengan edge `[fromId, toId, jarakDalamUnitSVG]`, lalu arahkan
   `js/routeEngine.js` agar sesuai ukuran mall sungguhan).
 - **Pencarian** memakai kombinasi pencocokan awalan/substring dan jarak
   Levenshtein pada nama, kategori, dan daftar alias — sehingga "musola",
-  "musholla", "musolla" semua menemukan "Musala" tanpa daftar typo manual
+  "musholla", "musolla" semua menemukan "Mushola" tanpa daftar typo manual
   yang panjang.
 - **Tanpa framework**: setiap file `js/*.js` adalah script klasik (bukan
   ES module) yang menambahkan namespace ke `window.MallNav*`, supaya

@@ -9,10 +9,7 @@
     <path d="M400,350 L400,470"/>
     <path d="M400,350 L400,230"/>
     <path d="M550,350 L550,230"/>
-    <path d="M550,230 L500,180"/>
-    <path d="M550,230 L620,190"/>
-    <path d="M550,230 L550,150"/>
-    <path d="M550,150 L600,150"/>
+    <path d="M700,350 L700,230"/>
   </g>
 
   <g class="room-zones">
@@ -20,14 +17,13 @@
     <text x="405" y="520" class="room-label">TOILET</text>
 
     <rect x="330" y="95" width="140" height="105" rx="14" class="room room-musala"/>
-    <text x="400" y="150" class="room-label">MUSALA</text>
+    <text x="400" y="150" class="room-label">MUSHOLA</text>
 
-    <rect x="430" y="80" width="330" height="185" rx="20" class="room room-foodcourt"/>
-    <text x="595" y="105" class="room-label room-label-lg">FOOD COURT</text>
-    <text x="480" y="200" class="room-label-sm">ES TELER 77</text>
-    <text x="560" y="175" class="room-label-sm">HOKBEN</text>
-    <text x="640" y="175" class="room-label-sm">PIZZA HUT</text>
-    <text x="700" y="210" class="room-label-sm">J.CO</text>
+    <rect x="480" y="95" width="140" height="105" rx="14" class="room room-rumahtangga"/>
+    <text x="550" y="150" class="room-label">AZ.KO</text>
+
+    <rect x="630" y="95" width="150" height="105" rx="14" class="room room-rumahtangga"/>
+    <text x="705" y="150" class="room-label">INFORMA</text>
 
     <rect x="795" y="250" width="90" height="90" rx="14" class="room room-utility"/>
     <text x="840" y="300" class="room-label">LIFT</text>
@@ -37,5 +33,5 @@
     <text x="945" y="335" class="zone-label" text-anchor="middle">ESKALATOR</text>
   </g>
 
-  <text x="70" y="105" class="floor-tag">LANTAI 3 &#183; FOOD COURT</text>
+  <text x="70" y="105" class="floor-tag">2ND FLOOR &#183; BENCOOLEN MALL</text>
 </svg>

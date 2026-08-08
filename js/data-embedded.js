@@ -11,8 +11,8 @@ window.MallNavEmbeddedData = {
     "floors": [
       {
         "id": "1",
-        "label": "Lantai 1",
-        "shortLabel": "L1",
+        "label": "Ground Floor",
+        "shortLabel": "GF",
         "order": 1,
         "svg": "assets/svg/floor1.svg",
         "viewBox": "0 0 1000 700",
@@ -20,8 +20,8 @@ window.MallNavEmbeddedData = {
       },
       {
         "id": "2",
-        "label": "Lantai 2",
-        "shortLabel": "L2",
+        "label": "1st Floor",
+        "shortLabel": "1F",
         "order": 2,
         "svg": "assets/svg/floor2.svg",
         "viewBox": "0 0 1000 700",
@@ -29,8 +29,8 @@ window.MallNavEmbeddedData = {
       },
       {
         "id": "3",
-        "label": "Lantai 3",
-        "shortLabel": "L3",
+        "label": "2nd Floor",
+        "shortLabel": "2F",
         "order": 3,
         "svg": "assets/svg/floor3.svg",
         "viewBox": "0 0 1000 700",
@@ -41,185 +41,186 @@ window.MallNavEmbeddedData = {
   "tenants": {
     "categories": {
       "fashion": {
-        "label": "Fashion",
+        "label": "Fashion & Accessories",
         "color": "#EC4899",
         "emoji": "👗"
       },
       "fnb": {
-        "label": "Makanan & Minuman",
+        "label": "Food & Beverage",
         "color": "#FF7A45",
         "emoji": "🍽"
       },
       "elektronik": {
-        "label": "Elektronik",
+        "label": "Gadget & Electronic",
         "color": "#0EA5E9",
         "emoji": "🔌"
       },
       "hiburan": {
-        "label": "Hiburan",
+        "label": "Kids & Entertainment",
         "color": "#8B5CF6",
         "emoji": "🎬"
       },
-      "layanan": {
-        "label": "Layanan",
-        "color": "#14B8A6",
-        "emoji": "🏦"
+      "kecantikan": {
+        "label": "Beauty & Health",
+        "color": "#F43F5E",
+        "emoji": "💄"
       },
-      "buku": {
-        "label": "Buku & Alat Tulis",
-        "color": "#F59E0B",
-        "emoji": "📚"
+      "rumahtangga": {
+        "label": "Home Appliance",
+        "color": "#B45309",
+        "emoji": "🛋"
       },
-      "olahraga": {
-        "label": "Olahraga",
-        "color": "#22C55E",
-        "emoji": "⚽"
+      "supermarket": {
+        "label": "Supermarket & Department Store",
+        "color": "#0D9488",
+        "emoji": "🛒"
+      },
+      "travel": {
+        "label": "Travel & Lifestyle",
+        "color": "#6366F1",
+        "emoji": "✈"
       }
     },
     "items": [
       {
-        "id": "uniqlo",
-        "name": "Uniqlo",
+        "id": "kimfashion",
+        "name": "Kim Fashion",
         "category": "fashion",
         "floor": "1",
         "nodeId": "n_uniqlo",
         "x": 250,
         "y": 210,
         "hours": "10:00 - 22:00",
-        "rating": 4.7,
-        "description": "Pakaian kasual pria, wanita, dan anak dengan konsep LifeWear."
+        "rating": 4.5,
+        "description": "Fashion pria dan wanita dengan pilihan model terkini. Ground Floor Blok B No.19."
       },
       {
-        "id": "hnm",
-        "name": "H&M",
+        "id": "moc",
+        "name": "MOC",
         "category": "fashion",
         "floor": "1",
         "nodeId": "n_hnm",
         "x": 330,
         "y": 210,
         "hours": "10:00 - 22:00",
-        "rating": 4.5,
-        "description": "Fashion trendi untuk seluruh keluarga dengan harga terjangkau."
+        "rating": 4.4,
+        "description": "Brand fashion kasual untuk tampilan sehari-hari yang stylish."
       },
       {
-        "id": "starbucks",
-        "name": "Starbucks Coffee",
-        "category": "fnb",
+        "id": "samsung",
+        "name": "Samsung",
+        "category": "elektronik",
         "floor": "1",
         "nodeId": "n_starbucks",
         "x": 700,
         "y": 210,
-        "hours": "08:00 - 22:00",
-        "rating": 4.6,
-        "description": "Kedai kopi premium dengan area duduk nyaman untuk bekerja atau bersantai."
+        "hours": "10:00 - 22:00",
+        "rating": 4.7,
+        "description": "Smartphone, gadget, dan elektronik resmi Samsung. Ground Floor Blok B No.9 & 10."
       },
       {
-        "id": "bankmandiri",
-        "name": "Bank Mandiri",
-        "category": "layanan",
+        "id": "erafone",
+        "name": "Erafone",
+        "category": "elektronik",
+        "floor": "1",
+        "nodeId": "n_erafone",
+        "x": 180,
+        "y": 495,
+        "hours": "10:00 - 22:00",
+        "rating": 4.5,
+        "description": "Gerai ponsel dan aksesoris multi-brand. Ground Floor Blok C No.15 & 16."
+      },
+      {
+        "id": "omegatour",
+        "name": "Omega Tour & Travel",
+        "category": "travel",
         "floor": "1",
         "nodeId": "n_bank",
         "x": 700,
         "y": 495,
-        "hours": "09:00 - 16:00",
-        "rating": 4.2,
-        "description": "Kantor cabang layanan perbankan dan setor tunai."
+        "hours": "09:00 - 17:00",
+        "rating": 4.3,
+        "description": "Layanan tiket perjalanan, tur, dan paket wisata. Ground Floor Blok A No.1."
       },
       {
-        "id": "gramedia",
-        "name": "Gramedia",
-        "category": "buku",
+        "id": "ramen1",
+        "name": "Ramen 1 Indonesia",
+        "category": "fnb",
+        "floor": "1",
+        "nodeId": "n_ramen1",
+        "x": 620,
+        "y": 645,
+        "hours": "10:00 - 22:00",
+        "rating": 4.6,
+        "description": "Ramen otentik ala Jepang di Area Bencoolen Hot Spot, Blok B No.5 & 6.",
+        "aliases": [
+          "kuliner",
+          "makanan",
+          "food",
+          "resto",
+          "restoran",
+          "ramen"
+        ]
+      },
+      {
+        "id": "matahari",
+        "name": "Matahari",
+        "category": "supermarket",
         "floor": "2",
         "nodeId": "n_gramedia",
         "x": 250,
         "y": 210,
         "hours": "10:00 - 22:00",
-        "rating": 4.8,
-        "description": "Toko buku, alat tulis, dan perlengkapan sekolah terlengkap."
+        "rating": 4.6,
+        "description": "Department store fashion dan kebutuhan keluarga terlengkap di 1st Floor."
       },
       {
-        "id": "electroniccity",
-        "name": "Electronic City",
-        "category": "elektronik",
+        "id": "ourselfstudio",
+        "name": "Our Self Studio",
+        "category": "hiburan",
         "floor": "2",
         "nodeId": "n_electroniccity",
         "x": 330,
         "y": 210,
         "hours": "10:00 - 22:00",
-        "rating": 4.4,
-        "description": "Gadget, elektronik rumah tangga, dan aksesoris terbaru."
+        "rating": 4.7,
+        "description": "Studio self-photo kekinian di area Bencoolen Hot Spot, 1st Floor."
       },
       {
-        "id": "xxi",
-        "name": "XXI Cinema",
-        "category": "hiburan",
+        "id": "mrdiy",
+        "name": "MR DIY",
+        "category": "rumahtangga",
         "floor": "2",
         "nodeId": "n_cinema",
         "x": 700,
         "y": 210,
-        "hours": "10:00 - 23:30",
-        "rating": 4.7,
-        "description": "Bioskop dengan teknologi layar dan suara terkini."
-      },
-      {
-        "id": "sportstation",
-        "name": "Sport Station",
-        "category": "olahraga",
-        "floor": "2",
-        "nodeId": "n_sportstation",
-        "x": 700,
-        "y": 495,
         "hours": "10:00 - 22:00",
         "rating": 4.5,
-        "description": "Perlengkapan dan sepatu olahraga dari berbagai brand ternama."
+        "description": "Perlengkapan rumah tangga, dekorasi, dan kebutuhan harian serba ada."
       },
       {
-        "id": "esteler77",
-        "name": "Es Teler 77",
-        "category": "fnb",
+        "id": "azko",
+        "name": "AZ.KO",
+        "category": "rumahtangga",
         "floor": "3",
-        "nodeId": "n_esteler",
-        "x": 480,
-        "y": 165,
-        "hours": "10:00 - 22:00",
-        "rating": 4.5,
-        "description": "Es teler, jus, dan hidangan Indonesia di area food court."
-      },
-      {
-        "id": "hokben",
-        "name": "Hokben",
-        "category": "fnb",
-        "floor": "3",
-        "nodeId": "n_hokben",
+        "nodeId": "n_azko",
         "x": 550,
-        "y": 130,
+        "y": 210,
+        "hours": "10:00 - 22:00",
+        "rating": 4.5,
+        "description": "Perabotan rumah tangga lengkap dan modern di 2nd Floor."
+      },
+      {
+        "id": "informa",
+        "name": "INFORMA",
+        "category": "rumahtangga",
+        "floor": "3",
+        "nodeId": "n_informa",
+        "x": 700,
+        "y": 210,
         "hours": "10:00 - 22:00",
         "rating": 4.6,
-        "description": "Hidangan bento ala Jepang, favorit keluarga."
-      },
-      {
-        "id": "pizzahut",
-        "name": "Pizza Hut",
-        "category": "fnb",
-        "floor": "3",
-        "nodeId": "n_pizzahut",
-        "x": 620,
-        "y": 130,
-        "hours": "10:00 - 22:00",
-        "rating": 4.3,
-        "description": "Pizza, pasta, dan hidangan keluarga dalam suasana santai."
-      },
-      {
-        "id": "jco",
-        "name": "J.CO Donuts & Coffee",
-        "category": "fnb",
-        "floor": "3",
-        "nodeId": "n_jco",
-        "x": 640,
-        "y": 205,
-        "hours": "08:00 - 22:00",
-        "rating": 4.7,
-        "description": "Donat premium dan kopi khas J.CO."
+        "description": "Furnitur dan perlengkapan rumah modern, dari ruang tamu sampai kamar tidur."
       }
     ]
   },
@@ -232,13 +233,13 @@ window.MallNavEmbeddedData = {
         "icon": "toilet"
       },
       "musala": {
-        "label": "Musala",
+        "label": "Mushola",
         "emoji": "🕌",
         "color": "#D4A017",
         "icon": "musala"
       },
       "atm": {
-        "label": "ATM",
+        "label": "ATM Centre",
         "emoji": "🏧",
         "color": "#8B5CF6",
         "icon": "atm"
@@ -255,11 +256,17 @@ window.MallNavEmbeddedData = {
         "color": "#64748B",
         "icon": "escalator"
       },
-      "foodcourt": {
-        "label": "Food Court",
-        "emoji": "🍔",
-        "color": "#FF7A45",
-        "icon": "foodcourt"
+      "nursery": {
+        "label": "Nursery Room",
+        "emoji": "👶",
+        "color": "#F472B6",
+        "icon": "entrance"
+      },
+      "infodesk": {
+        "label": "Info Desk",
+        "emoji": "ℹ️",
+        "color": "#0D9488",
+        "icon": "entrance"
       },
       "entrance": {
         "label": "Pintu Masuk",
@@ -271,7 +278,7 @@ window.MallNavEmbeddedData = {
     "items": [
       {
         "id": "musala1",
-        "name": "Musala Lantai 1",
+        "name": "Mushola Ground Floor",
         "category": "musala",
         "floor": "1",
         "nodeId": "n_musala1",
@@ -279,7 +286,7 @@ window.MallNavEmbeddedData = {
         "y": 165,
         "hours": "05:00 - 22:00",
         "rating": 4.8,
-        "description": "Musala nyaman dengan area wudhu terpisah pria dan wanita, dilengkapi mukena dan sajadah bersih.",
+        "description": "Mushola bersih dan nyaman, dilengkapi tempat wudhu terpisah untuk pria dan wanita.",
         "aliases": [
           "musala",
           "mushola",
@@ -291,15 +298,15 @@ window.MallNavEmbeddedData = {
       },
       {
         "id": "musala3",
-        "name": "Musala Utama Lantai 3",
+        "name": "Mushola 2nd Floor",
         "category": "musala",
         "floor": "3",
         "nodeId": "n_musala3",
         "x": 400,
         "y": 165,
         "hours": "05:00 - 22:00",
-        "rating": 4.9,
-        "description": "Musala utama dengan kapasitas lebih besar, ber-AC, dekat dengan area food court.",
+        "rating": 4.7,
+        "description": "Mushola dengan tempat wudhu terpisah pria dan wanita di 2nd Floor.",
         "aliases": [
           "musala",
           "mushola",
@@ -311,7 +318,7 @@ window.MallNavEmbeddedData = {
       },
       {
         "id": "toilet1",
-        "name": "Toilet Lantai 1",
+        "name": "Toilet Ground Floor",
         "category": "toilet",
         "floor": "1",
         "nodeId": "n_toilet1",
@@ -319,7 +326,7 @@ window.MallNavEmbeddedData = {
         "y": 545,
         "hours": "10:00 - 22:00",
         "rating": 4.3,
-        "description": "Toilet umum pria dan wanita, bersih dan terawat, dilengkapi ruang menyusui.",
+        "description": "Toilet umum pria dan wanita, bersih dan terawat.",
         "aliases": [
           "wc",
           "toilet",
@@ -330,7 +337,7 @@ window.MallNavEmbeddedData = {
       },
       {
         "id": "toilet2",
-        "name": "Toilet Lantai 2",
+        "name": "Toilet 1st Floor",
         "category": "toilet",
         "floor": "2",
         "nodeId": "n_toilet2",
@@ -338,7 +345,7 @@ window.MallNavEmbeddedData = {
         "y": 495,
         "hours": "10:00 - 22:00",
         "rating": 4.2,
-        "description": "Toilet umum pria dan wanita di area tengah lantai 2.",
+        "description": "Toilet umum pria dan wanita di area tengah 1st Floor.",
         "aliases": [
           "wc",
           "toilet",
@@ -349,7 +356,7 @@ window.MallNavEmbeddedData = {
       },
       {
         "id": "toilet3",
-        "name": "Toilet Lantai 3",
+        "name": "Toilet 2nd Floor",
         "category": "toilet",
         "floor": "3",
         "nodeId": "n_toilet3",
@@ -357,7 +364,7 @@ window.MallNavEmbeddedData = {
         "y": 495,
         "hours": "10:00 - 22:00",
         "rating": 4.4,
-        "description": "Toilet umum pria dan wanita, berdekatan dengan food court.",
+        "description": "Toilet umum pria dan wanita di 2nd Floor.",
         "aliases": [
           "wc",
           "toilet",
@@ -368,7 +375,7 @@ window.MallNavEmbeddedData = {
       },
       {
         "id": "atm1",
-        "name": "ATM Center Lantai 1",
+        "name": "ATM Centre",
         "category": "atm",
         "floor": "1",
         "nodeId": "n_atm1",
@@ -376,7 +383,7 @@ window.MallNavEmbeddedData = {
         "y": 470,
         "hours": "24 Jam",
         "rating": 4.5,
-        "description": "Deretan mesin ATM dari berbagai bank besar, tersedia 24 jam.",
+        "description": "Transaksi lebih mudah dan cepat di ATM Centre Bencoolen Mall.",
         "aliases": [
           "atm",
           "anjungan tunai mandiri",
@@ -385,8 +392,44 @@ window.MallNavEmbeddedData = {
         ]
       },
       {
+        "id": "nursery1",
+        "name": "Nursery Room",
+        "category": "nursery",
+        "floor": "1",
+        "nodeId": "n_j_toilet1",
+        "x": 460,
+        "y": 495,
+        "hours": "10:00 - 22:00",
+        "rating": 4.7,
+        "description": "Ruang khusus ibu dan bayi untuk menyusui dan mengganti popok dengan aman dan nyaman.",
+        "aliases": [
+          "nursery",
+          "ruang laktasi",
+          "ruang menyusui",
+          "baby room"
+        ]
+      },
+      {
+        "id": "infodesk1",
+        "name": "Info Desk",
+        "category": "infodesk",
+        "floor": "1",
+        "nodeId": "n_lobby",
+        "x": 130,
+        "y": 400,
+        "hours": "10:00 - 22:00",
+        "rating": 4.6,
+        "description": "Pusat informasi untuk bantuan, petunjuk lokasi, dan info fasilitas & layanan.",
+        "aliases": [
+          "info desk",
+          "customer service",
+          "informasi",
+          "resepsionis"
+        ]
+      },
+      {
         "id": "lift1",
-        "name": "Lift Utama Lantai 1",
+        "name": "Lift Ground Floor",
         "category": "lift",
         "floor": "1",
         "nodeId": "n_lift1",
@@ -403,7 +446,7 @@ window.MallNavEmbeddedData = {
       },
       {
         "id": "lift2",
-        "name": "Lift Lantai 2",
+        "name": "Lift 1st Floor",
         "category": "lift",
         "floor": "2",
         "nodeId": "n_lift2",
@@ -420,7 +463,7 @@ window.MallNavEmbeddedData = {
       },
       {
         "id": "lift3",
-        "name": "Lift Lantai 3",
+        "name": "Lift 2nd Floor",
         "category": "lift",
         "floor": "3",
         "nodeId": "n_lift3",
@@ -437,7 +480,7 @@ window.MallNavEmbeddedData = {
       },
       {
         "id": "esc1",
-        "name": "Eskalator Timur Lantai 1",
+        "name": "Eskalator Ground Floor",
         "category": "escalator",
         "floor": "1",
         "nodeId": "n_esc1",
@@ -445,7 +488,7 @@ window.MallNavEmbeddedData = {
         "y": 350,
         "hours": "10:00 - 22:00",
         "rating": 4.4,
-        "description": "Eskalator menuju Lantai 2, berada di sisi timur mall.",
+        "description": "Eskalator menuju 1st Floor, berada di sisi timur mall.",
         "aliases": [
           "eskalator",
           "escalator",
@@ -454,7 +497,7 @@ window.MallNavEmbeddedData = {
       },
       {
         "id": "esc2",
-        "name": "Eskalator Lantai 2",
+        "name": "Eskalator 1st Floor",
         "category": "escalator",
         "floor": "2",
         "nodeId": "n_esc2a",
@@ -462,7 +505,7 @@ window.MallNavEmbeddedData = {
         "y": 350,
         "hours": "10:00 - 22:00",
         "rating": 4.4,
-        "description": "Eskalator menghubungkan Lantai 1 dan Lantai 3.",
+        "description": "Eskalator menghubungkan Ground Floor dan 2nd Floor.",
         "aliases": [
           "eskalator",
           "escalator",
@@ -471,7 +514,7 @@ window.MallNavEmbeddedData = {
       },
       {
         "id": "esc3",
-        "name": "Eskalator Lantai 3",
+        "name": "Eskalator 2nd Floor",
         "category": "escalator",
         "floor": "3",
         "nodeId": "n_esc3a",
@@ -479,30 +522,11 @@ window.MallNavEmbeddedData = {
         "y": 350,
         "hours": "10:00 - 22:00",
         "rating": 4.3,
-        "description": "Eskalator turun menuju Lantai 2, dekat food court.",
+        "description": "Eskalator turun menuju 1st Floor.",
         "aliases": [
           "eskalator",
           "escalator",
           "tangga jalan"
-        ]
-      },
-      {
-        "id": "foodcourt3",
-        "name": "Food Court Lantai 3",
-        "category": "foodcourt",
-        "floor": "3",
-        "nodeId": "n_foodcourt",
-        "x": 550,
-        "y": 210,
-        "hours": "10:00 - 22:00",
-        "rating": 4.7,
-        "description": "Area food court dengan lebih dari 20 gerai makanan dan tempat duduk luas.",
-        "aliases": [
-          "food court",
-          "foodcourt",
-          "pujasera",
-          "kantin",
-          "tempat makan"
         ]
       }
     ]
@@ -615,6 +639,16 @@ window.MallNavEmbeddedData = {
             "id": "n_bank",
             "x": 700,
             "y": 470
+          },
+          {
+            "id": "n_erafone",
+            "x": 180,
+            "y": 470
+          },
+          {
+            "id": "n_ramen1",
+            "x": 620,
+            "y": 620
           }
         ],
         "edges": [
@@ -717,6 +751,16 @@ window.MallNavEmbeddedData = {
             "n_c4",
             "n_bank",
             130
+          ],
+          [
+            "n_c1",
+            "n_erafone",
+            140
+          ],
+          [
+            "n_j_selatan",
+            "n_ramen1",
+            130
           ]
         ]
       },
@@ -776,11 +820,6 @@ window.MallNavEmbeddedData = {
             "id": "n_cinema",
             "x": 700,
             "y": 230
-          },
-          {
-            "id": "n_sportstation",
-            "x": 700,
-            "y": 470
           }
         ],
         "edges": [
@@ -833,11 +872,6 @@ window.MallNavEmbeddedData = {
             "n_c4f2",
             "n_cinema",
             130
-          ],
-          [
-            "n_c4f2",
-            "n_sportstation",
-            130
           ]
         ]
       },
@@ -889,29 +923,14 @@ window.MallNavEmbeddedData = {
             "y": 230
           },
           {
-            "id": "n_foodcourt",
+            "id": "n_azko",
             "x": 550,
             "y": 230
           },
           {
-            "id": "n_esteler",
-            "x": 500,
-            "y": 180
-          },
-          {
-            "id": "n_hokben",
-            "x": 550,
-            "y": 150
-          },
-          {
-            "id": "n_pizzahut",
-            "x": 600,
-            "y": 150
-          },
-          {
-            "id": "n_jco",
-            "x": 620,
-            "y": 190
+            "id": "n_informa",
+            "x": 700,
+            "y": 230
           }
         ],
         "edges": [
@@ -957,28 +976,13 @@ window.MallNavEmbeddedData = {
           ],
           [
             "n_c3f3",
-            "n_foodcourt",
-            80
+            "n_azko",
+            120
           ],
           [
-            "n_foodcourt",
-            "n_esteler",
-            60
-          ],
-          [
-            "n_foodcourt",
-            "n_hokben",
-            70
-          ],
-          [
-            "n_foodcourt",
-            "n_pizzahut",
-            75
-          ],
-          [
-            "n_foodcourt",
-            "n_jco",
-            65
+            "n_c4f3",
+            "n_informa",
+            130
           ]
         ]
       }
@@ -1055,8 +1059,8 @@ window.MallNavEmbeddedData = {
     ]
   },
   "svg": {
-    "1": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1000 700\">\n  <!-- Building shell -->\n  <rect x=\"40\" y=\"70\" width=\"920\" height=\"580\" rx=\"28\" fill=\"var(--map-bg)\" stroke=\"var(--map-wall)\" stroke-width=\"3\"/>\n\n  <!-- Corridor (walkable path) -->\n  <g fill=\"none\" stroke=\"var(--map-corridor)\" stroke-width=\"46\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n    <path d=\"M80,350 L250,350 L400,350 L550,350 L700,350 L850,350 L920,350\"/>\n    <path d=\"M550,350 L550,650\"/>\n    <path d=\"M850,350 L850,300\"/>\n    <path d=\"M850,350 L850,230 L920,180\"/>\n  </g>\n  <g fill=\"none\" stroke=\"var(--map-corridor-spur)\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n    <path d=\"M400,350 L400,470 L400,520\"/>\n    <path d=\"M400,470 L330,470\"/>\n    <path d=\"M400,350 L400,230 L400,180\"/>\n    <path d=\"M250,350 L250,230\"/>\n    <path d=\"M250,230 L330,230\"/>\n    <path d=\"M700,350 L700,230\"/>\n    <path d=\"M700,350 L700,470\"/>\n  </g>\n\n  <!-- Room zones -->\n  <g class=\"room-zones\">\n    <rect x=\"150\" y=\"95\" width=\"130\" height=\"105\" rx=\"14\" class=\"room room-fashion\"/>\n    <text x=\"215\" y=\"150\" class=\"room-label\">UNIQLO</text>\n\n    <rect x=\"290\" y=\"95\" width=\"120\" height=\"105\" rx=\"14\" class=\"room room-fashion\"/>\n    <text x=\"350\" y=\"150\" class=\"room-label\">H&amp;M</text>\n\n    <rect x=\"430\" y=\"85\" width=\"140\" height=\"100\" rx=\"14\" class=\"room room-musala\"/>\n    <text x=\"500\" y=\"140\" class=\"room-label\">MUSALA</text>\n\n    <rect x=\"630\" y=\"95\" width=\"150\" height=\"105\" rx=\"14\" class=\"room room-fnb\"/>\n    <text x=\"705\" y=\"150\" class=\"room-label\">STARBUCKS</text>\n\n    <rect x=\"255\" y=\"465\" width=\"230\" height=\"105\" rx=\"14\" class=\"room room-service\"/>\n    <text x=\"315\" y=\"500\" class=\"room-label\">ATM</text>\n    <text x=\"425\" y=\"530\" class=\"room-label\">TOILET</text>\n\n    <rect x=\"630\" y=\"465\" width=\"150\" height=\"105\" rx=\"14\" class=\"room room-layanan\"/>\n    <text x=\"705\" y=\"520\" class=\"room-label\">BANK MANDIRI</text>\n\n    <rect x=\"795\" y=\"250\" width=\"90\" height=\"90\" rx=\"14\" class=\"room room-utility\"/>\n    <text x=\"840\" y=\"300\" class=\"room-label\">LIFT</text>\n  </g>\n\n  <!-- Entrances -->\n  <g class=\"entrances\">\n    <rect x=\"40\" y=\"320\" width=\"24\" height=\"60\" rx=\"6\" class=\"door\"/>\n    <text x=\"90\" y=\"410\" class=\"zone-label\">LOBBY UTAMA</text>\n\n    <rect x=\"518\" y=\"640\" width=\"60\" height=\"24\" rx=\"6\" class=\"door\"/>\n    <text x=\"550\" y=\"672\" class=\"zone-label\" text-anchor=\"middle\">PINTU SELATAN</text>\n\n    <rect x=\"905\" y=\"160\" width=\"24\" height=\"60\" rx=\"6\" class=\"door\"/>\n    <text x=\"900\" y=\"150\" class=\"zone-label\" text-anchor=\"end\">AREA PARKIR</text>\n\n    <text x=\"945\" y=\"335\" class=\"zone-label\" text-anchor=\"middle\">ESKALATOR</text>\n  </g>\n\n  <text x=\"70\" y=\"105\" class=\"floor-tag\">LANTAI 1 &#183; GROUND FLOOR</text>\n</svg>\n",
-    "2": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1000 700\">\n  <rect x=\"40\" y=\"70\" width=\"920\" height=\"580\" rx=\"28\" fill=\"var(--map-bg)\" stroke=\"var(--map-wall)\" stroke-width=\"3\"/>\n\n  <g fill=\"none\" stroke=\"var(--map-corridor)\" stroke-width=\"46\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n    <path d=\"M120,350 L250,350 L400,350 L550,350 L700,350 L850,350 L920,350\"/>\n    <path d=\"M850,350 L850,300\"/>\n  </g>\n  <g fill=\"none\" stroke=\"var(--map-corridor-spur)\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n    <path d=\"M400,350 L400,470\"/>\n    <path d=\"M250,350 L250,230\"/>\n    <path d=\"M250,230 L330,230\"/>\n    <path d=\"M700,350 L700,230\"/>\n    <path d=\"M700,350 L700,470\"/>\n  </g>\n\n  <g class=\"room-zones\">\n    <rect x=\"150\" y=\"95\" width=\"130\" height=\"105\" rx=\"14\" class=\"room room-buku\"/>\n    <text x=\"215\" y=\"150\" class=\"room-label\">GRAMEDIA</text>\n\n    <rect x=\"290\" y=\"95\" width=\"120\" height=\"105\" rx=\"14\" class=\"room room-elektronik\"/>\n    <text x=\"350\" y=\"150\" class=\"room-label\">E-CITY</text>\n\n    <rect x=\"330\" y=\"465\" width=\"150\" height=\"105\" rx=\"14\" class=\"room room-service\"/>\n    <text x=\"405\" y=\"520\" class=\"room-label\">TOILET</text>\n\n    <rect x=\"630\" y=\"95\" width=\"150\" height=\"105\" rx=\"14\" class=\"room room-hiburan\"/>\n    <text x=\"705\" y=\"140\" class=\"room-label\">XXI</text>\n    <text x=\"705\" y=\"162\" class=\"room-label\">CINEMA</text>\n\n    <rect x=\"630\" y=\"465\" width=\"150\" height=\"105\" rx=\"14\" class=\"room room-olahraga\"/>\n    <text x=\"705\" y=\"500\" class=\"room-label\">SPORT</text>\n    <text x=\"705\" y=\"522\" class=\"room-label\">STATION</text>\n\n    <rect x=\"795\" y=\"250\" width=\"90\" height=\"90\" rx=\"14\" class=\"room room-utility\"/>\n    <text x=\"840\" y=\"300\" class=\"room-label\">LIFT</text>\n  </g>\n\n  <g class=\"entrances\">\n    <text x=\"945\" y=\"335\" class=\"zone-label\" text-anchor=\"middle\">ESKALATOR</text>\n  </g>\n\n  <text x=\"70\" y=\"105\" class=\"floor-tag\">LANTAI 2 &#183; FASHION &amp; ENTERTAINMENT</text>\n</svg>\n",
-    "3": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1000 700\">\n  <rect x=\"40\" y=\"70\" width=\"920\" height=\"580\" rx=\"28\" fill=\"var(--map-bg)\" stroke=\"var(--map-wall)\" stroke-width=\"3\"/>\n\n  <g fill=\"none\" stroke=\"var(--map-corridor)\" stroke-width=\"46\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n    <path d=\"M120,350 L250,350 L400,350 L550,350 L700,350 L850,350 L920,350\"/>\n    <path d=\"M850,350 L850,300\"/>\n  </g>\n  <g fill=\"none\" stroke=\"var(--map-corridor-spur)\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n    <path d=\"M400,350 L400,470\"/>\n    <path d=\"M400,350 L400,230\"/>\n    <path d=\"M550,350 L550,230\"/>\n    <path d=\"M550,230 L500,180\"/>\n    <path d=\"M550,230 L620,190\"/>\n    <path d=\"M550,230 L550,150\"/>\n    <path d=\"M550,150 L600,150\"/>\n  </g>\n\n  <g class=\"room-zones\">\n    <rect x=\"330\" y=\"465\" width=\"150\" height=\"105\" rx=\"14\" class=\"room room-service\"/>\n    <text x=\"405\" y=\"520\" class=\"room-label\">TOILET</text>\n\n    <rect x=\"330\" y=\"95\" width=\"140\" height=\"105\" rx=\"14\" class=\"room room-musala\"/>\n    <text x=\"400\" y=\"150\" class=\"room-label\">MUSALA</text>\n\n    <rect x=\"430\" y=\"80\" width=\"330\" height=\"185\" rx=\"20\" class=\"room room-foodcourt\"/>\n    <text x=\"595\" y=\"105\" class=\"room-label room-label-lg\">FOOD COURT</text>\n    <text x=\"480\" y=\"200\" class=\"room-label-sm\">ES TELER 77</text>\n    <text x=\"560\" y=\"175\" class=\"room-label-sm\">HOKBEN</text>\n    <text x=\"640\" y=\"175\" class=\"room-label-sm\">PIZZA HUT</text>\n    <text x=\"700\" y=\"210\" class=\"room-label-sm\">J.CO</text>\n\n    <rect x=\"795\" y=\"250\" width=\"90\" height=\"90\" rx=\"14\" class=\"room room-utility\"/>\n    <text x=\"840\" y=\"300\" class=\"room-label\">LIFT</text>\n  </g>\n\n  <g class=\"entrances\">\n    <text x=\"945\" y=\"335\" class=\"zone-label\" text-anchor=\"middle\">ESKALATOR</text>\n  </g>\n\n  <text x=\"70\" y=\"105\" class=\"floor-tag\">LANTAI 3 &#183; FOOD COURT</text>\n</svg>\n"
+    "1": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1000 700\">\n  <!-- Building shell -->\n  <rect x=\"40\" y=\"70\" width=\"920\" height=\"580\" rx=\"28\" fill=\"var(--map-bg)\" stroke=\"var(--map-wall)\" stroke-width=\"3\"/>\n\n  <!-- Corridor (walkable path) -->\n  <g fill=\"none\" stroke=\"var(--map-corridor)\" stroke-width=\"46\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n    <path d=\"M80,350 L250,350 L400,350 L550,350 L700,350 L850,350 L920,350\"/>\n    <path d=\"M550,350 L550,650\"/>\n    <path d=\"M850,350 L850,300\"/>\n    <path d=\"M850,350 L850,230 L920,180\"/>\n  </g>\n  <g fill=\"none\" stroke=\"var(--map-corridor-spur)\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n    <path d=\"M400,350 L400,470 L400,520\"/>\n    <path d=\"M400,470 L330,470\"/>\n    <path d=\"M400,350 L400,230 L400,180\"/>\n    <path d=\"M250,350 L250,230\"/>\n    <path d=\"M250,230 L330,230\"/>\n    <path d=\"M700,350 L700,230\"/>\n    <path d=\"M700,350 L700,470\"/>\n    <path d=\"M250,350 L180,350 L180,470\"/>\n    <path d=\"M550,650 L620,650\"/>\n  </g>\n\n  <!-- Room zones -->\n  <g class=\"room-zones\">\n    <rect x=\"150\" y=\"95\" width=\"130\" height=\"105\" rx=\"14\" class=\"room room-fashion\"/>\n    <text x=\"215\" y=\"150\" class=\"room-label\">KIM FASHION</text>\n\n    <rect x=\"290\" y=\"95\" width=\"120\" height=\"105\" rx=\"14\" class=\"room room-fashion\"/>\n    <text x=\"350\" y=\"150\" class=\"room-label\">MOC</text>\n\n    <rect x=\"430\" y=\"85\" width=\"140\" height=\"100\" rx=\"14\" class=\"room room-musala\"/>\n    <text x=\"500\" y=\"140\" class=\"room-label\">MUSHOLA</text>\n\n    <rect x=\"630\" y=\"95\" width=\"150\" height=\"105\" rx=\"14\" class=\"room room-elektronik\"/>\n    <text x=\"705\" y=\"150\" class=\"room-label\">SAMSUNG</text>\n\n    <rect x=\"255\" y=\"465\" width=\"150\" height=\"105\" rx=\"14\" class=\"room room-service\"/>\n    <text x=\"330\" y=\"500\" class=\"room-label\">ATM</text>\n    <text x=\"330\" y=\"530\" class=\"room-label\">TOILET</text>\n\n    <rect x=\"120\" y=\"465\" width=\"120\" height=\"105\" rx=\"14\" class=\"room room-elektronik\"/>\n    <text x=\"180\" y=\"520\" class=\"room-label\">ERAFONE</text>\n\n    <rect x=\"630\" y=\"465\" width=\"150\" height=\"105\" rx=\"14\" class=\"room room-travel\"/>\n    <text x=\"705\" y=\"500\" class=\"room-label\">OMEGA</text>\n    <text x=\"705\" y=\"522\" class=\"room-label\">TOUR &amp; TRAVEL</text>\n\n    <rect x=\"555\" y=\"595\" width=\"130\" height=\"90\" rx=\"14\" class=\"room room-fnb\"/>\n    <text x=\"620\" y=\"645\" class=\"room-label\">RAMEN 1</text>\n\n    <rect x=\"795\" y=\"250\" width=\"90\" height=\"90\" rx=\"14\" class=\"room room-utility\"/>\n    <text x=\"840\" y=\"300\" class=\"room-label\">LIFT</text>\n  </g>\n\n  <!-- Entrances -->\n  <g class=\"entrances\">\n    <rect x=\"40\" y=\"320\" width=\"24\" height=\"60\" rx=\"6\" class=\"door\"/>\n    <text x=\"90\" y=\"410\" class=\"zone-label\">LOBBY UTAMA</text>\n\n    <rect x=\"518\" y=\"640\" width=\"60\" height=\"24\" rx=\"6\" class=\"door\"/>\n    <text x=\"550\" y=\"672\" class=\"zone-label\" text-anchor=\"middle\">PINTU SELATAN</text>\n\n    <rect x=\"905\" y=\"160\" width=\"24\" height=\"60\" rx=\"6\" class=\"door\"/>\n    <text x=\"900\" y=\"150\" class=\"zone-label\" text-anchor=\"end\">AREA PARKIR</text>\n\n    <text x=\"945\" y=\"335\" class=\"zone-label\" text-anchor=\"middle\">ESKALATOR</text>\n  </g>\n\n  <text x=\"70\" y=\"105\" class=\"floor-tag\">GROUND FLOOR &#183; BENCOOLEN MALL</text>\n</svg>\n",
+    "2": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1000 700\">\n  <rect x=\"40\" y=\"70\" width=\"920\" height=\"580\" rx=\"28\" fill=\"var(--map-bg)\" stroke=\"var(--map-wall)\" stroke-width=\"3\"/>\n\n  <g fill=\"none\" stroke=\"var(--map-corridor)\" stroke-width=\"46\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n    <path d=\"M120,350 L250,350 L400,350 L550,350 L700,350 L850,350 L920,350\"/>\n    <path d=\"M850,350 L850,300\"/>\n  </g>\n  <g fill=\"none\" stroke=\"var(--map-corridor-spur)\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n    <path d=\"M400,350 L400,470\"/>\n    <path d=\"M250,350 L250,230\"/>\n    <path d=\"M250,230 L330,230\"/>\n    <path d=\"M700,350 L700,230\"/>\n  </g>\n\n  <g class=\"room-zones\">\n    <rect x=\"140\" y=\"90\" width=\"150\" height=\"110\" rx=\"14\" class=\"room room-supermarket\"/>\n    <text x=\"215\" y=\"150\" class=\"room-label\">MATAHARI</text>\n\n    <rect x=\"300\" y=\"90\" width=\"110\" height=\"110\" rx=\"14\" class=\"room room-hiburan\"/>\n    <text x=\"355\" y=\"140\" class=\"room-label\">OUR SELF</text>\n    <text x=\"355\" y=\"162\" class=\"room-label\">STUDIO</text>\n\n    <rect x=\"330\" y=\"465\" width=\"150\" height=\"105\" rx=\"14\" class=\"room room-service\"/>\n    <text x=\"405\" y=\"520\" class=\"room-label\">TOILET</text>\n\n    <rect x=\"630\" y=\"95\" width=\"150\" height=\"105\" rx=\"14\" class=\"room room-rumahtangga\"/>\n    <text x=\"705\" y=\"150\" class=\"room-label\">MR DIY</text>\n\n    <rect x=\"795\" y=\"250\" width=\"90\" height=\"90\" rx=\"14\" class=\"room room-utility\"/>\n    <text x=\"840\" y=\"300\" class=\"room-label\">LIFT</text>\n  </g>\n\n  <g class=\"entrances\">\n    <text x=\"945\" y=\"335\" class=\"zone-label\" text-anchor=\"middle\">ESKALATOR</text>\n  </g>\n\n  <text x=\"70\" y=\"105\" class=\"floor-tag\">1ST FLOOR &#183; BENCOOLEN MALL</text>\n</svg>\n",
+    "3": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 1000 700\">\n  <rect x=\"40\" y=\"70\" width=\"920\" height=\"580\" rx=\"28\" fill=\"var(--map-bg)\" stroke=\"var(--map-wall)\" stroke-width=\"3\"/>\n\n  <g fill=\"none\" stroke=\"var(--map-corridor)\" stroke-width=\"46\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n    <path d=\"M120,350 L250,350 L400,350 L550,350 L700,350 L850,350 L920,350\"/>\n    <path d=\"M850,350 L850,300\"/>\n  </g>\n  <g fill=\"none\" stroke=\"var(--map-corridor-spur)\" stroke-width=\"26\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n    <path d=\"M400,350 L400,470\"/>\n    <path d=\"M400,350 L400,230\"/>\n    <path d=\"M550,350 L550,230\"/>\n    <path d=\"M700,350 L700,230\"/>\n  </g>\n\n  <g class=\"room-zones\">\n    <rect x=\"330\" y=\"465\" width=\"150\" height=\"105\" rx=\"14\" class=\"room room-service\"/>\n    <text x=\"405\" y=\"520\" class=\"room-label\">TOILET</text>\n\n    <rect x=\"330\" y=\"95\" width=\"140\" height=\"105\" rx=\"14\" class=\"room room-musala\"/>\n    <text x=\"400\" y=\"150\" class=\"room-label\">MUSHOLA</text>\n\n    <rect x=\"480\" y=\"95\" width=\"140\" height=\"105\" rx=\"14\" class=\"room room-rumahtangga\"/>\n    <text x=\"550\" y=\"150\" class=\"room-label\">AZ.KO</text>\n\n    <rect x=\"630\" y=\"95\" width=\"150\" height=\"105\" rx=\"14\" class=\"room room-rumahtangga\"/>\n    <text x=\"705\" y=\"150\" class=\"room-label\">INFORMA</text>\n\n    <rect x=\"795\" y=\"250\" width=\"90\" height=\"90\" rx=\"14\" class=\"room room-utility\"/>\n    <text x=\"840\" y=\"300\" class=\"room-label\">LIFT</text>\n  </g>\n\n  <g class=\"entrances\">\n    <text x=\"945\" y=\"335\" class=\"zone-label\" text-anchor=\"middle\">ESKALATOR</text>\n  </g>\n\n  <text x=\"70\" y=\"105\" class=\"floor-tag\">2ND FLOOR &#183; BENCOOLEN MALL</text>\n</svg>\n"
   }
 };

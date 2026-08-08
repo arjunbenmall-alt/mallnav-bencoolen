@@ -15,11 +15,11 @@
 
   const QUICK_ACTIONS = [
     { category: "toilet", emoji: "\uD83D\uDEBB", label: "Toilet" },
-    { category: "musala", emoji: "\uD83D\uDD4C", label: "Musala" },
-    { category: "atm", emoji: "\uD83C\uDFE7", label: "ATM" },
+    { category: "musala", emoji: "\uD83D\uDD4C", label: "Mushola" },
+    { category: "atm", emoji: "\uD83C\uDFE7", label: "ATM Centre" },
     { category: "lift", emoji: "\uD83D\uDED7", label: "Lift" },
     { category: "escalator", emoji: "\u2B06", label: "Eskalator" },
-    { category: "foodcourt", emoji: "\uD83C\uDF54", label: "Food Court" },
+    { category: "fnb", emoji: "\uD83C\uDF7D", label: "Kuliner" },
     { category: "__all_tenant__", emoji: "\uD83D\uDECD", label: "Semua Tenant" },
   ];
 
@@ -92,6 +92,15 @@
   function placeIconMarkup(place) {
     if (place.type === "facility") return place.emoji;
     return place.emoji || "\uD83D\uDECD";
+  }
+
+  function floorLabelOf(floorId) {
+    const f = state.floorsById[floorId];
+    return f ? f.label : "Lantai " + floorId;
+  }
+  function floorShortLabelOf(floorId) {
+    const f = state.floorsById[floorId];
+    return f ? f.shortLabel : floorId;
   }
 
   function renderDirectoryList(floorId) {
@@ -184,7 +193,7 @@
           U.el("div", { class: "search-result__icon swatch-" + place.category, html: placeIconMarkup(place) }),
           U.el("div", { class: "search-result__body" }, [
             U.el("div", { class: "search-result__name" }, [place.name]),
-            U.el("div", { class: "search-result__meta" }, [place.categoryLabel + " \u00B7 Lantai " + place.floor]),
+            U.el("div", { class: "search-result__meta" }, [place.categoryLabel + " \u00B7 " + floorLabelOf(place.floor)]),
           ]),
           U.el("span", { class: "search-result__go", html: UI.icon("chevronRight", { size: 18 }) }),
         ]
@@ -276,7 +285,7 @@
       ])
     );
     const metaRow = U.el("div", { class: "sheet__meta-row no-scrollbar" }, [
-      metaChip("Lantai", "L" + place.floor),
+      metaChip("Lantai", floorShortLabelOf(place.floor)),
       metaChip("Jam Buka", place.hours),
       metaChip("Estimasi Jalan", est ? est.distance : "\u2014"),
       metaChip("Estimasi Waktu", est ? est.duration : "\u2014"),
@@ -334,7 +343,7 @@
           U.el("div", { class: "origin-option__icon", html: UI.icon(originIconFor(qp.code), { size: 18 }) }),
           U.el("div", {}, [
             U.el("div", { class: "origin-option__label" }, [qp.label]),
-            U.el("div", { class: "origin-option__sub" }, ["Lantai " + qp.floor]),
+            U.el("div", { class: "origin-option__sub" }, [floorLabelOf(qp.floor)]),
           ]),
         ]
       );

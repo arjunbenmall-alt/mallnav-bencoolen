@@ -2,8 +2,8 @@
   "floors": [
     {
       "id": "1",
-      "label": "Lantai 1",
-      "shortLabel": "L1",
+      "label": "Ground Floor",
+      "shortLabel": "GF",
       "order": 1,
       "svg": "assets/svg/floor1.svg",
       "viewBox": "0 0 1000 700",
@@ -11,8 +11,8 @@
     },
     {
       "id": "2",
-      "label": "Lantai 2",
-      "shortLabel": "L2",
+      "label": "1st Floor",
+      "shortLabel": "1F",
       "order": 2,
       "svg": "assets/svg/floor2.svg",
       "viewBox": "0 0 1000 700",
@@ -20,8 +20,8 @@
     },
     {
       "id": "3",
-      "label": "Lantai 3",
-      "shortLabel": "L3",
+      "label": "2nd Floor",
+      "shortLabel": "2F",
       "order": 3,
       "svg": "assets/svg/floor3.svg",
       "viewBox": "0 0 1000 700",

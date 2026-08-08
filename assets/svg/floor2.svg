@@ -10,26 +10,21 @@
     <path d="M250,350 L250,230"/>
     <path d="M250,230 L330,230"/>
     <path d="M700,350 L700,230"/>
-    <path d="M700,350 L700,470"/>
   </g>
 
   <g class="room-zones">
-    <rect x="150" y="95" width="130" height="105" rx="14" class="room room-buku"/>
-    <text x="215" y="150" class="room-label">GRAMEDIA</text>
+    <rect x="140" y="90" width="150" height="110" rx="14" class="room room-supermarket"/>
+    <text x="215" y="150" class="room-label">MATAHARI</text>
 
-    <rect x="290" y="95" width="120" height="105" rx="14" class="room room-elektronik"/>
-    <text x="350" y="150" class="room-label">E-CITY</text>
+    <rect x="300" y="90" width="110" height="110" rx="14" class="room room-hiburan"/>
+    <text x="355" y="140" class="room-label">OUR SELF</text>
+    <text x="355" y="162" class="room-label">STUDIO</text>
 
     <rect x="330" y="465" width="150" height="105" rx="14" class="room room-service"/>
     <text x="405" y="520" class="room-label">TOILET</text>
 
-    <rect x="630" y="95" width="150" height="105" rx="14" class="room room-hiburan"/>
-    <text x="705" y="140" class="room-label">XXI</text>
-    <text x="705" y="162" class="room-label">CINEMA</text>
-
-    <rect x="630" y="465" width="150" height="105" rx="14" class="room room-olahraga"/>
-    <text x="705" y="500" class="room-label">SPORT</text>
-    <text x="705" y="522" class="room-label">STATION</text>
+    <rect x="630" y="95" width="150" height="105" rx="14" class="room room-rumahtangga"/>
+    <text x="705" y="150" class="room-label">MR DIY</text>
 
     <rect x="795" y="250" width="90" height="90" rx="14" class="room room-utility"/>
     <text x="840" y="300" class="room-label">LIFT</text>
@@ -39,5 +34,5 @@
     <text x="945" y="335" class="zone-label" text-anchor="middle">ESKALATOR</text>
   </g>
 
-  <text x="70" y="105" class="floor-tag">LANTAI 2 &#183; FASHION &amp; ENTERTAINMENT</text>
+  <text x="70" y="105" class="floor-tag">1ST FLOOR &#183; BENCOOLEN MALL</text>
 </svg>

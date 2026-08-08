@@ -33,6 +33,10 @@
   --cat-layanan: #14b8a6;
   --cat-buku: #f59e0b;
   --cat-olahraga: #22c55e;
+  --cat-kecantikan: #f43f5e;
+  --cat-rumahtangga: #b45309;
+  --cat-supermarket: #0d9488;
+  --cat-travel: #6366f1;
 
   /* ---- Surfaces ---- */
   --surface: #f4f6fc;
@@ -158,6 +162,10 @@
 .room-hiburan { fill: color-mix(in srgb, var(--cat-hiburan) 12%, var(--map-room-fill)); }
 .room-olahraga { fill: color-mix(in srgb, var(--cat-olahraga) 12%, var(--map-room-fill)); }
 .room-foodcourt { fill: color-mix(in srgb, var(--cat-foodcourt) 14%, var(--map-room-fill)); }
+.room-travel { fill: color-mix(in srgb, var(--cat-travel) 14%, var(--map-room-fill)); }
+.room-rumahtangga { fill: color-mix(in srgb, var(--cat-rumahtangga) 14%, var(--map-room-fill)); }
+.room-supermarket { fill: color-mix(in srgb, var(--cat-supermarket) 14%, var(--map-room-fill)); }
+.room-kecantikan { fill: color-mix(in srgb, var(--cat-kecantikan) 14%, var(--map-room-fill)); }
 
 .room-label { font-family: var(--font-display); font-size: 15px; font-weight: 700; fill: var(--map-label); text-anchor: middle; letter-spacing: 0.02em; }
 .room-label-sm { font-family: var(--font-body); font-size: 11px; font-weight: 600; fill: var(--map-label); text-anchor: middle; }

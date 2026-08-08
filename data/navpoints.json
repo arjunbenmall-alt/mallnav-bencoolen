@@ -22,7 +22,9 @@
         { "id": "n_uniqlo", "x": 250, "y": 230 },
         { "id": "n_hnm", "x": 330, "y": 230 },
         { "id": "n_starbucks", "x": 700, "y": 230 },
-        { "id": "n_bank", "x": 700, "y": 470 }
+        { "id": "n_bank", "x": 700, "y": 470 },
+        { "id": "n_erafone", "x": 180, "y": 470 },
+        { "id": "n_ramen1", "x": 620, "y": 620 }
       ],
       "edges": [
         ["n_lobby", "n_c1", 170],
@@ -44,7 +46,9 @@
         ["n_c1", "n_uniqlo", 120],
         ["n_uniqlo", "n_hnm", 90],
         ["n_c4", "n_starbucks", 130],
-        ["n_c4", "n_bank", 130]
+        ["n_c4", "n_bank", 130],
+        ["n_c1", "n_erafone", 140],
+        ["n_j_selatan", "n_ramen1", 130]
       ]
     },
     "2": {
@@ -59,8 +63,7 @@
         { "id": "n_toilet2", "x": 400, "y": 470 },
         { "id": "n_gramedia", "x": 250, "y": 230 },
         { "id": "n_electroniccity", "x": 330, "y": 230 },
-        { "id": "n_cinema", "x": 700, "y": 230 },
-        { "id": "n_sportstation", "x": 700, "y": 470 }
+        { "id": "n_cinema", "x": 700, "y": 230 }
       ],
       "edges": [
         ["n_c1f2", "n_c2f2", 150],
@@ -72,8 +75,7 @@
         ["n_c2f2", "n_toilet2", 130],
         ["n_c1f2", "n_gramedia", 120],
         ["n_gramedia", "n_electroniccity", 90],
-        ["n_c4f2", "n_cinema", 130],
-        ["n_c4f2", "n_sportstation", 130]
+        ["n_c4f2", "n_cinema", 130]
       ]
     },
     "3": {
@@ -87,11 +89,8 @@
         { "id": "n_esc3a", "x": 920, "y": 350 },
         { "id": "n_toilet3", "x": 400, "y": 470 },
         { "id": "n_musala3", "x": 400, "y": 230 },
-        { "id": "n_foodcourt", "x": 550, "y": 230 },
-        { "id": "n_esteler", "x": 500, "y": 180 },
-        { "id": "n_hokben", "x": 550, "y": 150 },
-        { "id": "n_pizzahut", "x": 600, "y": 150 },
-        { "id": "n_jco", "x": 620, "y": 190 }
+        { "id": "n_azko", "x": 550, "y": 230 },
+        { "id": "n_informa", "x": 700, "y": 230 }
       ],
       "edges": [
         ["n_c1f3", "n_c2f3", 150],
@@ -102,11 +101,8 @@
         ["n_c5f3", "n_esc3a", 75],
         ["n_c2f3", "n_toilet3", 130],
         ["n_c2f3", "n_musala3", 120],
-        ["n_c3f3", "n_foodcourt", 80],
-        ["n_foodcourt", "n_esteler", 60],
-        ["n_foodcourt", "n_hokben", 70],
-        ["n_foodcourt", "n_pizzahut", 75],
-        ["n_foodcourt", "n_jco", 65]
+        ["n_c3f3", "n_azko", 120],
+        ["n_c4f3", "n_informa", 130]
       ]
     }
   },

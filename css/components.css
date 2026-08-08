@@ -392,6 +392,12 @@
 .swatch-layanan { background: color-mix(in srgb, var(--cat-layanan) 18%, transparent); color: var(--cat-layanan); }
 .swatch-buku { background: color-mix(in srgb, var(--cat-buku) 18%, transparent); color: var(--cat-buku); }
 .swatch-olahraga { background: color-mix(in srgb, var(--cat-olahraga) 18%, transparent); color: var(--cat-olahraga); }
+.swatch-kecantikan { background: color-mix(in srgb, var(--cat-kecantikan) 18%, transparent); color: var(--cat-kecantikan); }
+.swatch-rumahtangga { background: color-mix(in srgb, var(--cat-rumahtangga) 18%, transparent); color: var(--cat-rumahtangga); }
+.swatch-supermarket { background: color-mix(in srgb, var(--cat-supermarket) 18%, transparent); color: var(--cat-supermarket); }
+.swatch-travel { background: color-mix(in srgb, var(--cat-travel) 18%, transparent); color: var(--cat-travel); }
+.swatch-nursery { background: color-mix(in srgb, #f472b6 18%, transparent); color: #f472b6; }
+.swatch-infodesk { background: color-mix(in srgb, var(--cat-supermarket) 18%, transparent); color: var(--cat-supermarket); }
 
 .banner-toilet { background: linear-gradient(155deg, color-mix(in srgb, var(--cat-toilet) 30%, var(--surface-elevated)), color-mix(in srgb, var(--cat-toilet) 12%, var(--surface-elevated))); }
 .banner-musala { background: linear-gradient(155deg, color-mix(in srgb, var(--cat-musala) 30%, var(--surface-elevated)), color-mix(in srgb, var(--cat-musala) 12%, var(--surface-elevated))); }
@@ -406,6 +412,12 @@
 .banner-layanan { background: linear-gradient(155deg, color-mix(in srgb, var(--cat-layanan) 30%, var(--surface-elevated)), color-mix(in srgb, var(--cat-layanan) 12%, var(--surface-elevated))); }
 .banner-buku { background: linear-gradient(155deg, color-mix(in srgb, var(--cat-buku) 30%, var(--surface-elevated)), color-mix(in srgb, var(--cat-buku) 12%, var(--surface-elevated))); }
 .banner-olahraga { background: linear-gradient(155deg, color-mix(in srgb, var(--cat-olahraga) 30%, var(--surface-elevated)), color-mix(in srgb, var(--cat-olahraga) 12%, var(--surface-elevated))); }
+.banner-kecantikan { background: linear-gradient(155deg, color-mix(in srgb, var(--cat-kecantikan) 30%, var(--surface-elevated)), color-mix(in srgb, var(--cat-kecantikan) 12%, var(--surface-elevated))); }
+.banner-rumahtangga { background: linear-gradient(155deg, color-mix(in srgb, var(--cat-rumahtangga) 30%, var(--surface-elevated)), color-mix(in srgb, var(--cat-rumahtangga) 12%, var(--surface-elevated))); }
+.banner-supermarket { background: linear-gradient(155deg, color-mix(in srgb, var(--cat-supermarket) 30%, var(--surface-elevated)), color-mix(in srgb, var(--cat-supermarket) 12%, var(--surface-elevated))); }
+.banner-travel { background: linear-gradient(155deg, color-mix(in srgb, var(--cat-travel) 30%, var(--surface-elevated)), color-mix(in srgb, var(--cat-travel) 12%, var(--surface-elevated))); }
+.banner-nursery { background: linear-gradient(155deg, color-mix(in srgb, #f472b6 30%, var(--surface-elevated)), color-mix(in srgb, #f472b6 12%, var(--surface-elevated))); }
+.banner-infodesk { background: linear-gradient(155deg, color-mix(in srgb, var(--cat-supermarket) 30%, var(--surface-elevated)), color-mix(in srgb, var(--cat-supermarket) 12%, var(--surface-elevated))); }
 
 /* ---- Splash ---- */
 #splash {
