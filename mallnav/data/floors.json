@@ -1,0 +1,31 @@
+{
+  "floors": [
+    {
+      "id": "1",
+      "label": "Lantai 1",
+      "shortLabel": "L1",
+      "order": 1,
+      "svg": "assets/svg/floor1.svg",
+      "viewBox": "0 0 1000 700",
+      "defaultEntry": "n_lobby"
+    },
+    {
+      "id": "2",
+      "label": "Lantai 2",
+      "shortLabel": "L2",
+      "order": 2,
+      "svg": "assets/svg/floor2.svg",
+      "viewBox": "0 0 1000 700",
+      "defaultEntry": "n_c1f2"
+    },
+    {
+      "id": "3",
+      "label": "Lantai 3",
+      "shortLabel": "L3",
+      "order": 3,
+      "svg": "assets/svg/floor3.svg",
+      "viewBox": "0 0 1000 700",
+      "defaultEntry": "n_c1f3"
+    }
+  ]
+}

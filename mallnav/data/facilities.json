@@ -1,0 +1,169 @@
+{
+  "categories": {
+    "toilet": { "label": "Toilet", "emoji": "🚻", "color": "#4F8EF7", "icon": "toilet" },
+    "musala": { "label": "Musala", "emoji": "🕌", "color": "#D4A017", "icon": "musala" },
+    "atm": { "label": "ATM", "emoji": "🏧", "color": "#8B5CF6", "icon": "atm" },
+    "lift": { "label": "Lift", "emoji": "🛗", "color": "#64748B", "icon": "lift" },
+    "escalator": { "label": "Eskalator", "emoji": "⬆", "color": "#64748B", "icon": "escalator" },
+    "foodcourt": { "label": "Food Court", "emoji": "🍔", "color": "#FF7A45", "icon": "foodcourt" },
+    "entrance": { "label": "Pintu Masuk", "emoji": "🚪", "color": "#0FA958", "icon": "entrance" }
+  },
+  "items": [
+    {
+      "id": "musala1",
+      "name": "Musala Lantai 1",
+      "category": "musala",
+      "floor": "1",
+      "nodeId": "n_musala1",
+      "x": 400, "y": 165,
+      "hours": "05:00 - 22:00",
+      "rating": 4.8,
+      "description": "Musala nyaman dengan area wudhu terpisah pria dan wanita, dilengkapi mukena dan sajadah bersih.",
+      "aliases": ["musala", "mushola", "musholla", "musola", "surau", "prayer room"]
+    },
+    {
+      "id": "musala3",
+      "name": "Musala Utama Lantai 3",
+      "category": "musala",
+      "floor": "3",
+      "nodeId": "n_musala3",
+      "x": 400, "y": 165,
+      "hours": "05:00 - 22:00",
+      "rating": 4.9,
+      "description": "Musala utama dengan kapasitas lebih besar, ber-AC, dekat dengan area food court.",
+      "aliases": ["musala", "mushola", "musholla", "musola", "surau", "prayer room"]
+    },
+    {
+      "id": "toilet1",
+      "name": "Toilet Lantai 1",
+      "category": "toilet",
+      "floor": "1",
+      "nodeId": "n_toilet1",
+      "x": 400, "y": 545,
+      "hours": "10:00 - 22:00",
+      "rating": 4.3,
+      "description": "Toilet umum pria dan wanita, bersih dan terawat, dilengkapi ruang menyusui.",
+      "aliases": ["wc", "toilet", "kamar mandi", "restroom", "rest room"]
+    },
+    {
+      "id": "toilet2",
+      "name": "Toilet Lantai 2",
+      "category": "toilet",
+      "floor": "2",
+      "nodeId": "n_toilet2",
+      "x": 400, "y": 495,
+      "hours": "10:00 - 22:00",
+      "rating": 4.2,
+      "description": "Toilet umum pria dan wanita di area tengah lantai 2.",
+      "aliases": ["wc", "toilet", "kamar mandi", "restroom", "rest room"]
+    },
+    {
+      "id": "toilet3",
+      "name": "Toilet Lantai 3",
+      "category": "toilet",
+      "floor": "3",
+      "nodeId": "n_toilet3",
+      "x": 400, "y": 495,
+      "hours": "10:00 - 22:00",
+      "rating": 4.4,
+      "description": "Toilet umum pria dan wanita, berdekatan dengan food court.",
+      "aliases": ["wc", "toilet", "kamar mandi", "restroom", "rest room"]
+    },
+    {
+      "id": "atm1",
+      "name": "ATM Center Lantai 1",
+      "category": "atm",
+      "floor": "1",
+      "nodeId": "n_atm1",
+      "x": 300, "y": 470,
+      "hours": "24 Jam",
+      "rating": 4.5,
+      "description": "Deretan mesin ATM dari berbagai bank besar, tersedia 24 jam.",
+      "aliases": ["atm", "anjungan tunai mandiri", "mesin atm", "bank"]
+    },
+    {
+      "id": "lift1",
+      "name": "Lift Utama Lantai 1",
+      "category": "lift",
+      "floor": "1",
+      "nodeId": "n_lift1",
+      "x": 850, "y": 270,
+      "hours": "10:00 - 22:00",
+      "rating": 4.6,
+      "description": "Lift utama menghubungkan seluruh lantai, ramah kursi roda.",
+      "aliases": ["lift", "elevator", "elevator lift"]
+    },
+    {
+      "id": "lift2",
+      "name": "Lift Lantai 2",
+      "category": "lift",
+      "floor": "2",
+      "nodeId": "n_lift2",
+      "x": 850, "y": 270,
+      "hours": "10:00 - 22:00",
+      "rating": 4.6,
+      "description": "Lift utama menghubungkan seluruh lantai, ramah kursi roda.",
+      "aliases": ["lift", "elevator", "elevator lift"]
+    },
+    {
+      "id": "lift3",
+      "name": "Lift Lantai 3",
+      "category": "lift",
+      "floor": "3",
+      "nodeId": "n_lift3",
+      "x": 850, "y": 270,
+      "hours": "10:00 - 22:00",
+      "rating": 4.6,
+      "description": "Lift utama menghubungkan seluruh lantai, ramah kursi roda.",
+      "aliases": ["lift", "elevator", "elevator lift"]
+    },
+    {
+      "id": "esc1",
+      "name": "Eskalator Timur Lantai 1",
+      "category": "escalator",
+      "floor": "1",
+      "nodeId": "n_esc1",
+      "x": 950, "y": 350,
+      "hours": "10:00 - 22:00",
+      "rating": 4.4,
+      "description": "Eskalator menuju Lantai 2, berada di sisi timur mall.",
+      "aliases": ["eskalator", "escalator", "tangga jalan"]
+    },
+    {
+      "id": "esc2",
+      "name": "Eskalator Lantai 2",
+      "category": "escalator",
+      "floor": "2",
+      "nodeId": "n_esc2a",
+      "x": 950, "y": 350,
+      "hours": "10:00 - 22:00",
+      "rating": 4.4,
+      "description": "Eskalator menghubungkan Lantai 1 dan Lantai 3.",
+      "aliases": ["eskalator", "escalator", "tangga jalan"]
+    },
+    {
+      "id": "esc3",
+      "name": "Eskalator Lantai 3",
+      "category": "escalator",
+      "floor": "3",
+      "nodeId": "n_esc3a",
+      "x": 950, "y": 350,
+      "hours": "10:00 - 22:00",
+      "rating": 4.3,
+      "description": "Eskalator turun menuju Lantai 2, dekat food court.",
+      "aliases": ["eskalator", "escalator", "tangga jalan"]
+    },
+    {
+      "id": "foodcourt3",
+      "name": "Food Court Lantai 3",
+      "category": "foodcourt",
+      "floor": "3",
+      "nodeId": "n_foodcourt",
+      "x": 550, "y": 210,
+      "hours": "10:00 - 22:00",
+      "rating": 4.7,
+      "description": "Area food court dengan lebih dari 20 gerai makanan dan tempat duduk luas.",
+      "aliases": ["food court", "foodcourt", "pujasera", "kantin", "tempat makan"]
+    }
+  ]
+}

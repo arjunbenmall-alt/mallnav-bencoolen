@@ -1,0 +1,167 @@
+/* ==========================================================================
+   MallNav — Design Tokens
+   Premium wayfinding palette: cobalt route-blue + "go" green (Grab/Gojek
+   energy) on a calm neutral surface, with a glowing cyan for the live
+   navigation route. Dark mode mirrors Apple/Google Maps night driving mode.
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* ---- Brand ---- */
+  --brand-blue: #2952e3;
+  --brand-blue-600: #2246c9;
+  --brand-blue-100: #e8edfd;
+  --brand-green: #0fa958;
+  --brand-green-600: #0c8a47;
+  --brand-green-100: #e3f7ec;
+  --brand-amber: #d4a017;
+  --brand-red: #e5484d;
+
+  /* ---- Category accents ---- */
+  --cat-toilet: #4f8ef7;
+  --cat-musala: #d4a017;
+  --cat-atm: #8b5cf6;
+  --cat-lift: #64748b;
+  --cat-escalator: #64748b;
+  --cat-foodcourt: #ff7a45;
+  --cat-entrance: #0fa958;
+  --cat-fashion: #ec4899;
+  --cat-fnb: #ff7a45;
+  --cat-elektronik: #0ea5e9;
+  --cat-hiburan: #8b5cf6;
+  --cat-layanan: #14b8a6;
+  --cat-buku: #f59e0b;
+  --cat-olahraga: #22c55e;
+
+  /* ---- Surfaces ---- */
+  --surface: #f4f6fc;
+  --surface-elevated: #ffffff;
+  --surface-sunken: #eaedf6;
+  --glass-bg: rgba(255, 255, 255, 0.74);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --scrim: rgba(15, 20, 35, 0.44);
+
+  /* ---- Text ---- */
+  --text-primary: #14151f;
+  --text-secondary: #5b6274;
+  --text-tertiary: #8991a3;
+  --text-on-brand: #ffffff;
+
+  --outline: #e3e6f0;
+  --outline-strong: #ccd2e3;
+
+  /* ---- Map (injected inline SVG reads these) ---- */
+  --map-bg: #fbfcff;
+  --map-wall: #d7dcec;
+  --map-corridor: #ffffff;
+  --map-corridor-spur: #eef1fa;
+  --map-room-fill: #eef1fb;
+  --map-room-stroke: #dde2f2;
+  --map-label: #9aa1b4;
+
+  /* ---- Route / navigation glow ---- */
+  --route-line: #2952e3;
+  --route-glow: #7fa0ff;
+  --route-user: #2952e3;
+  --route-user-ring: rgba(41, 82, 227, 0.25);
+
+  /* ---- Typography ----
+     System-font stack tuned for a premium, app-native feel with zero
+     network dependency — MallNav must render identically offline. */
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "Segoe UI Variable", "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
+    Roboto, "Helvetica Neue", sans-serif;
+  --font-mono: "SF Mono", "Roboto Mono", ui-monospace, "Cascadia Mono",
+    "Courier New", monospace;
+
+  /* ---- Radius ---- */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* ---- Shadow ---- */
+  --shadow-sm: 0 1px 3px rgba(20, 24, 42, 0.08), 0 1px 2px rgba(20, 24, 42, 0.06);
+  --shadow-md: 0 8px 24px rgba(20, 24, 42, 0.12), 0 2px 6px rgba(20, 24, 42, 0.06);
+  --shadow-lg: 0 16px 40px rgba(20, 24, 42, 0.18), 0 4px 12px rgba(20, 24, 42, 0.08);
+  --shadow-fab: 0 6px 18px rgba(41, 82, 227, 0.32);
+  --shadow-cta: 0 10px 24px rgba(15, 169, 88, 0.35);
+
+  /* ---- Motion ---- */
+  --ease-standard: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-decel: cubic-bezier(0, 0, 0.2, 1);
+  --ease-accel: cubic-bezier(0.4, 0, 1, 1);
+  --dur-fast: 140ms;
+  --dur-base: 240ms;
+  --dur-slow: 420ms;
+
+  /* ---- Layout ---- */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --header-h: 0px;
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --surface: #0b1220;
+  --surface-elevated: #131b2e;
+  --surface-sunken: #0e1526;
+  --glass-bg: rgba(19, 27, 46, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --scrim: rgba(2, 5, 12, 0.6);
+
+  --text-primary: #f3f5fc;
+  --text-secondary: #9aa4bd;
+  --text-tertiary: #6b7590;
+  --text-on-brand: #ffffff;
+
+  --outline: #232d45;
+  --outline-strong: #2f3a56;
+
+  --map-bg: #0e1526;
+  --map-wall: #263255;
+  --map-corridor: #16213a;
+  --map-corridor-spur: #131c31;
+  --map-room-fill: #17213a;
+  --map-room-stroke: #2a3658;
+  --map-label: #6b7590;
+
+  --route-line: #22d3ee;
+  --route-glow: #22d3ee;
+  --route-user: #22d3ee;
+  --route-user-ring: rgba(34, 211, 238, 0.25);
+
+  --brand-blue-100: #182647;
+  --brand-green-100: #0d2a1d;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.55);
+  --shadow-fab: 0 6px 18px rgba(34, 211, 238, 0.28);
+  --shadow-cta: 0 10px 24px rgba(15, 169, 88, 0.4);
+}
+
+/* Category fills used by SVG rooms (light) */
+.room { fill: var(--map-room-fill); stroke: var(--map-room-stroke); stroke-width: 2; }
+.room-musala { fill: color-mix(in srgb, var(--cat-musala) 14%, var(--map-room-fill)); }
+.room-fashion { fill: color-mix(in srgb, var(--cat-fashion) 12%, var(--map-room-fill)); }
+.room-fnb { fill: color-mix(in srgb, var(--cat-fnb) 12%, var(--map-room-fill)); }
+.room-service { fill: color-mix(in srgb, var(--cat-toilet) 12%, var(--map-room-fill)); }
+.room-layanan { fill: color-mix(in srgb, var(--cat-layanan) 12%, var(--map-room-fill)); }
+.room-utility { fill: color-mix(in srgb, var(--cat-lift) 14%, var(--map-room-fill)); }
+.room-buku { fill: color-mix(in srgb, var(--cat-buku) 12%, var(--map-room-fill)); }
+.room-elektronik { fill: color-mix(in srgb, var(--cat-elektronik) 12%, var(--map-room-fill)); }
+.room-hiburan { fill: color-mix(in srgb, var(--cat-hiburan) 12%, var(--map-room-fill)); }
+.room-olahraga { fill: color-mix(in srgb, var(--cat-olahraga) 12%, var(--map-room-fill)); }
+.room-foodcourt { fill: color-mix(in srgb, var(--cat-foodcourt) 14%, var(--map-room-fill)); }
+
+.room-label { font-family: var(--font-display); font-size: 15px; font-weight: 700; fill: var(--map-label); text-anchor: middle; letter-spacing: 0.02em; }
+.room-label-sm { font-family: var(--font-body); font-size: 11px; font-weight: 600; fill: var(--map-label); text-anchor: middle; }
+.room-label-lg { font-size: 17px; }
+.zone-label { font-family: var(--font-display); font-size: 13px; font-weight: 700; fill: var(--text-tertiary); letter-spacing: 0.04em; }
+.floor-tag { font-family: var(--font-mono); font-size: 12px; font-weight: 600; fill: var(--map-label); letter-spacing: 0.06em; }
+.door { fill: var(--brand-green); opacity: 0.85; }
