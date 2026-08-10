@@ -87,6 +87,13 @@ a { color: inherit; }
   overflow: hidden;
 }
 
+/* Desktop: keep the phone-proportioned column centered instead of letting
+   text/controls stretch edge-to-edge across a wide viewport. */
+@media (min-width: 720px) {
+  #screen-home { display: flex; flex-direction: column; align-items: center; }
+  #screen-home > * { width: 100%; max-width: 480px; }
+}
+
 .screen-fade-enter {
   animation: screenFadeIn var(--dur-slow) var(--ease-decel);
 }

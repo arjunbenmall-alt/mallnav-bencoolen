@@ -239,7 +239,7 @@ window.MallNavEmbeddedData = {
         "icon": "musala"
       },
       "atm": {
-        "label": "ATM Centre",
+        "label": "ATM",
         "emoji": "🏧",
         "color": "#8B5CF6",
         "icon": "atm"

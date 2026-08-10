@@ -14,13 +14,13 @@
   const $ = (id) => document.getElementById(id);
 
   const QUICK_ACTIONS = [
-    { category: "toilet", emoji: "\uD83D\uDEBB", label: "Toilet" },
-    { category: "musala", emoji: "\uD83D\uDD4C", label: "Mushola" },
-    { category: "atm", emoji: "\uD83C\uDFE7", label: "ATM Centre" },
-    { category: "lift", emoji: "\uD83D\uDED7", label: "Lift" },
-    { category: "escalator", emoji: "\u2B06", label: "Eskalator" },
-    { category: "fnb", emoji: "\uD83C\uDF7D", label: "Kuliner" },
-    { category: "__all_tenant__", emoji: "\uD83D\uDECD", label: "Semua Tenant" },
+    { category: "toilet", label: "Toilet" },
+    { category: "musala", label: "Mushola" },
+    { category: "atm", label: "ATM" },
+    { category: "lift", label: "Lift" },
+    { category: "escalator", label: "Eskalator" },
+    { category: "fnb", label: "Kuliner" },
+    { category: "__all_tenant__", label: "Semua Tenant", icon: "shopping-bag" },
   ];
 
   const state = {
@@ -35,7 +35,7 @@
     activeScreen: "home",
   };
 
-  let mapEngineMap, mapEngineNav, navPreview, navPlay, toast, previewSheet, originSheet;
+  let mapEngineMap, mapEngineNav, navPreview, navPlay, toast, previewSheet, originSheet, infoSheet;
 
   // ----------------------------------------------------------------- theme
   function applyTheme(theme) {
@@ -70,6 +70,87 @@
     active.classList.remove("screen-fade-enter");
     void active.offsetWidth;
     active.classList.add("screen-fade-enter");
+    syncBottomNav(name);
+  }
+
+  // ------------------------------------------------------------ bottom nav
+  function syncBottomNav(screenName) {
+    const bar = $("bottomNav");
+    if (!bar) return;
+    // Visible on Home and Map (browsing/preview); hidden only during the
+    // focused fullscreen turn-by-turn mode, which already owns a busy
+    // bottom area (progress bar, ETA, end button).
+    bar.classList.toggle("is-hidden", screenName === "nav");
+    U.qsa(".bottom-nav__item", bar).forEach((btn) => {
+      const tabForScreen = screenName === "map" ? "navTabMap" : screenName === "home" ? "navTabHome" : null;
+      btn.classList.toggle("is-active", btn.id === tabForScreen);
+    });
+  }
+
+  async function openMapBrowse() {
+    showScreen("map");
+    $("routeSummary").style.display = "none";
+    previewSheet.close();
+    $("mapLoadingVeil").classList.remove("is-hidden");
+    const floorId = state.mapFloor || "1";
+    renderFloorPills($("mapFloorPills"), floorId, selectMapFloor, "map-floor-pill");
+    await loadFloorInto(mapEngineMap, floorId, { fit: false });
+    mapEngineMap.fitToFloor(true);
+    mapEngineMap.setSelectedPin(null);
+    $("mapLoadingVeil").classList.add("is-hidden");
+  }
+
+  function openInfoSheet() {
+    const content = $("infoSheetContent");
+    content.innerHTML = "";
+    content.appendChild(
+      U.el("div", { class: "sheet__header" }, [
+        U.el("div", { class: "sheet__avatar swatch-infodesk", html: UI.icon("info", { size: 24 }) }),
+        U.el("div", { class: "sheet__header-text" }, [U.el("div", { class: "sheet__cat" }, ["Tentang"])]),
+      ])
+    );
+    content.appendChild(U.el("div", { class: "sheet__title-row" }, [U.el("div", { class: "sheet__title" }, ["MallNav"])]));
+    content.appendChild(
+      U.el("div", { class: "sheet__desc" }, [
+        "Navigasi indoor Bencoolen Mall — cari tenant atau fasilitas, lihat rute, dan sampai dalam hitungan detik.",
+      ])
+    );
+    const metaRow = U.el("div", { class: "sheet__meta-row no-scrollbar" }, [
+      metaChip("Jam Operasional", "10:00 - 22:00"),
+      metaChip("Total Tenant", "200+"),
+      metaChip("Lantai", "3 Lantai"),
+    ]);
+    content.appendChild(metaRow);
+    content.appendChild(U.el("div", { class: "section-heading", style: "padding:18px 0 8px;" }, [U.el("div", { class: "section-heading__title", style: "font-size:15px;" }, ["Fasilitas Tersedia"])]));
+    const facilityCats = Object.keys(state.data.facilityCategories || {});
+    const facList = U.el("div", { class: "directory-list", style: "margin:0;" }, []);
+    facilityCats.forEach((cat) => {
+      const meta = state.data.facilityCategories[cat];
+      facList.appendChild(
+        U.el("div", { class: "directory-item" }, [
+          U.el("div", { class: "search-result__icon swatch-" + cat, html: UI.categoryIcon(cat, { size: 18 }) }),
+          U.el("div", { class: "search-result__body" }, [U.el("div", { class: "search-result__name" }, [meta.label])]),
+        ])
+      );
+    });
+    content.appendChild(facList);
+    content.appendChild(U.el("div", { class: "sheet__actions" }, [U.el("button", { class: "btn btn-secondary", style: "width:100%;", onClick: () => infoSheet.close() }, ["Tutup"])]));
+    infoSheet.open();
+  }
+
+  function wireBottomNav() {
+    $("navTabHome").querySelector(".bottom-nav__icon").innerHTML = UI.icon("home", { size: 22 });
+    $("navTabSearch").querySelector(".bottom-nav__icon").innerHTML = UI.icon("search", { size: 22 });
+    $("navTabMap").querySelector(".bottom-nav__icon").innerHTML = UI.icon("layers", { size: 22 });
+    $("navTabInfo").querySelector(".bottom-nav__icon").innerHTML = UI.icon("info", { size: 22 });
+
+    $("navTabHome").addEventListener("click", () => showScreen("home"));
+    $("navTabSearch").addEventListener("click", () => {
+      showScreen("home");
+      setTimeout(() => $("searchInput").focus(), 260);
+    });
+    $("navTabMap").addEventListener("click", () => openMapBrowse());
+    $("navTabInfo").addEventListener("click", () => openInfoSheet());
   }
 
   // ----------------------------------------------------------- floor pills
@@ -89,9 +170,8 @@
   }
 
   // ------------------------------------------------------------- directory
-  function placeIconMarkup(place) {
-    if (place.type === "facility") return place.emoji;
-    return place.emoji || "\uD83D\uDECD";
+  function placeIconMarkup(place, size) {
+    return UI.categoryIcon(place.category, { size: size || 18 });
   }
 
   function floorLabelOf(floorId) {
@@ -117,12 +197,35 @@
           U.el("div", { class: "search-result__icon swatch-" + place.category, html: placeIconMarkup(place) }),
           U.el("div", { class: "search-result__body" }, [
             U.el("div", { class: "search-result__name" }, [place.name]),
-            U.el("div", { class: "search-result__meta" }, [place.categoryLabel]),
+            U.el("div", { class: "search-result__meta" }, [place.categoryLabel + " \u00B7 " + floorShortLabelOf(place.floor)]),
           ]),
-          U.el("span", { class: "search-result__go", html: UI.icon("chevronRight", { size: 18 }) }),
+          U.el("span", { class: "directory-item__nav", html: UI.icon("navigation", { size: 14 }) }),
         ]
       );
       list.appendChild(row);
+    });
+  }
+
+  // -------------------------------------------------------------- popular
+  const POPULAR_IDS = ["matahari", "samsung", "informa", "kimfashion", "ramen1", "azko"];
+  function renderPopular() {
+    const row = $("popularRow");
+    if (!row) return;
+    row.innerHTML = "";
+    const byId = {};
+    state.data.places.forEach((p) => (byId[p.id] = p));
+    const items = POPULAR_IDS.map((id) => byId[id]).filter(Boolean);
+    items.forEach((place) => {
+      const card = U.el(
+        "button",
+        { class: "popular-card", onClick: () => openPreview(place) },
+        [
+          U.el("div", { class: "popular-card__icon swatch-" + place.category, html: placeIconMarkup(place, 18) }),
+          U.el("div", { class: "popular-card__name" }, [place.name]),
+          U.el("div", { class: "popular-card__meta" }, [floorShortLabelOf(place.floor)]),
+        ]
+      );
+      row.appendChild(card);
     });
   }
 
@@ -131,11 +234,12 @@
     const grid = $("quickActions");
     grid.innerHTML = "";
     QUICK_ACTIONS.forEach((qa) => {
+      const iconMarkup = qa.icon ? UI.icon(qa.icon, { size: 19 }) : UI.categoryIcon(qa.category, { size: 19 });
       const btn = U.el(
         "button",
         {
           class: "quick-action",
-          onClick: (e) => {
+          onClick: () => {
             btn.classList.remove("is-tapped");
             void btn.offsetWidth;
             btn.classList.add("is-tapped");
@@ -143,7 +247,7 @@
           },
         },
         [
-          U.el("div", { class: "quick-action__icon swatch-" + (qa.category === "__all_tenant__" ? "fashion" : qa.category) }, [qa.emoji]),
+          U.el("div", { class: "quick-action__icon", html: iconMarkup }),
           U.el("div", { class: "quick-action__label" }, [qa.label]),
         ]
       );
@@ -202,6 +306,60 @@
     });
   }
 
+  const SUGGEST_CATEGORIES = [
+    { category: "toilet", label: "Toilet" },
+    { category: "musala", label: "Mushola" },
+    { category: "atm", label: "ATM" },
+  ];
+
+  function renderSearchSuggestions() {
+    const box = $("searchResults");
+    box.innerHTML = "";
+    const wrap = U.el("div", { class: "search-suggest" }, []);
+    wrap.appendChild(U.el("div", { class: "search-suggest__label" }, ["Pencarian Populer"]));
+    const chips = U.el("div", { class: "search-suggest__chips" }, []);
+    SUGGEST_CATEGORIES.forEach((sc) => {
+      chips.appendChild(
+        U.el(
+          "button",
+          { class: "search-suggest__chip", html: UI.categoryIcon(sc.category, { size: 15 }) + " " + sc.label, onClick: () => handleQuickAction(sc) }
+        )
+      );
+    });
+    wrap.appendChild(chips);
+    wrap.appendChild(U.el("div", { class: "search-suggest__label" }, ["Tenant"]));
+    box.appendChild(wrap);
+
+    const byId = {};
+    state.data.places.forEach((p) => (byId[p.id] = p));
+    const items = POPULAR_IDS.map((id) => byId[id]).filter(Boolean).slice(0, 5);
+    items.forEach((place) => {
+      box.appendChild(
+        U.el(
+          "button",
+          {
+            class: "search-result",
+            onClick: () => {
+              $("searchInput").value = "";
+              $("btnClearSearch").style.display = "none";
+              box.classList.remove("is-open");
+              openPreview(place);
+            },
+          },
+          [
+            U.el("div", { class: "search-result__icon swatch-" + place.category, html: placeIconMarkup(place) }),
+            U.el("div", { class: "search-result__body" }, [
+              U.el("div", { class: "search-result__name" }, [place.name]),
+              U.el("div", { class: "search-result__meta" }, [place.categoryLabel + " \u00B7 " + floorLabelOf(place.floor)]),
+            ]),
+            U.el("span", { class: "search-result__go", html: UI.icon("chevronRight", { size: 18 }) }),
+          ]
+        )
+      );
+    });
+    box.classList.add("is-open");
+  }
+
   function wireSearch() {
     const input = $("searchInput");
     const clearBtn = $("btnClearSearch");
@@ -210,7 +368,7 @@
       const q = input.value.trim();
       clearBtn.style.display = q ? "flex" : "none";
       if (!q) {
-        box.classList.remove("is-open");
+        renderSearchSuggestions();
         return;
       }
       const results = window.MallNavSearch.search(q, state.data.places, 8);
@@ -220,11 +378,12 @@
     input.addEventListener("input", run);
     input.addEventListener("focus", () => {
       if (input.value.trim()) box.classList.add("is-open");
+      else renderSearchSuggestions();
     });
     clearBtn.addEventListener("click", () => {
       input.value = "";
       clearBtn.style.display = "none";
-      box.classList.remove("is-open");
+      renderSearchSuggestions();
       input.focus();
     });
     document.addEventListener("click", (e) => {
@@ -273,16 +432,14 @@
     const content = $("previewSheetContent");
     content.innerHTML = "";
     content.appendChild(
-      U.el("div", { class: "sheet__banner banner-" + place.category }, [
-        U.el("span", { class: "sheet__banner-cat" }, [place.categoryLabel]),
-        placeIconMarkup(place),
+      U.el("div", { class: "sheet__header" }, [
+        U.el("div", { class: "sheet__avatar swatch-" + place.category, html: placeIconMarkup(place, 24) }),
+        U.el("div", { class: "sheet__header-text" }, [U.el("div", { class: "sheet__cat" }, [place.categoryLabel])]),
+        U.el("div", { class: "sheet__rating", html: UI.icon("star", { size: 14 }) + " " + place.rating.toFixed(1) }),
       ])
     );
     content.appendChild(
-      U.el("div", { class: "sheet__title-row" }, [
-        U.el("div", { class: "sheet__title" }, [place.name]),
-        U.el("div", { class: "sheet__rating", html: UI.icon("star", { size: 15 }) + " " + place.rating.toFixed(1) }),
-      ])
+      U.el("div", { class: "sheet__title-row" }, [U.el("div", { class: "sheet__title" }, [place.name])])
     );
     const metaRow = U.el("div", { class: "sheet__meta-row no-scrollbar" }, [
       metaChip("Lantai", floorShortLabelOf(place.floor)),
@@ -438,7 +595,7 @@
       $("arrivalTitle").textContent = "Anda telah tiba!";
       $("arrivalSub").textContent = "di " + place.name;
       $("arrivalCard").classList.add("is-open");
-      mapEngineNav.burstAt(point || { x: 500, y: 350 }, "\u2728");
+      mapEngineNav.burstAt(point || { x: 500, y: 350 });
     });
   }
 
@@ -501,7 +658,7 @@
     });
     $("btnArrivalDone").addEventListener("click", () => {
       exitNavigation(true);
-      toast.show("Selamat, Anda telah sampai! \uD83C\uDF89");
+      toast.show("Selamat, Anda telah sampai di tujuan.");
     });
   }
 
@@ -539,6 +696,8 @@
     toast = UI.createToast(document.body);
     previewSheet = UI.createBottomSheet($("previewSheet"), $("previewScrim"), {});
     originSheet = UI.createBottomSheet($("originSheet"), $("originScrim"), {});
+    infoSheet = UI.createBottomSheet($("infoSheet"), $("infoScrim"), {});
+    wireBottomNav();
     wireStaticButtons();
 
     state.data = await window.MallNavData.load();
@@ -560,6 +719,9 @@
     wireNavEvents();
 
     renderQuickActions();
+    renderPopular();
+    $("popularSeeAllIcon").innerHTML = UI.icon("chevronRight", { size: 14 });
+    $("btnPopularSeeAll").addEventListener("click", () => handleQuickAction({ category: "__all_tenant__", label: "Semua Tenant" }));
     renderFloorPills($("homeFloorPills"), state.homeFloor, selectHomeFloor, "floor-pill");
     renderDirectoryList(state.homeFloor);
     wireSearch();

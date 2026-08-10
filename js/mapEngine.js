@@ -11,6 +11,7 @@
   "use strict";
 
   const U = global.MallNavUtils;
+  const UI = global.MallNavUI;
 
   function parseViewBox(vbStr) {
     const [x, y, w, h] = vbStr.split(/\s+/).map(Number);
@@ -307,34 +308,29 @@
     }
 
     // ---------------------------------------------------------------- pins
-    const CAT_ICON_PATHS = {
-      toilet: "\uD83D\uDEBB",
-      musala: "\uD83D\uDD4C",
-      atm: "\uD83C\uDFE7",
-      lift: "\uD83D\uDED7",
-      escalator: "\u2B06",
-      foodcourt: "\uD83C\uDF54",
-      entrance: "\uD83D\uDEAA",
-    };
-
-    function pinGlyph(place) {
-      if (place.type === "facility") return CAT_ICON_PATHS[place.category] || place.emoji || "\uD83D\uDCCD";
-      return place.emoji || "\uD83D\uDECD";
-    }
-
     function renderPin(place, layerName) {
       const g = U.svgEl("g", { class: "map-pin pop-in", "data-id": place.id, "data-cat": place.category });
       g.style.transformBox = "fill-box";
       g.style.transformOrigin = "center";
       const halo = U.svgEl("circle", { cx: place.x, cy: place.y, r: 26, class: "map-pin__halo" });
-      const circle = U.svgEl("circle", { cx: place.x, cy: place.y, r: 15, class: "map-pin__circle", fill: place.color });
-      const glyph = U.svgEl("text", { x: place.x, y: place.y + 1, class: "map-pin__glyph" });
-      glyph.textContent = pinGlyph(place);
-      const label = U.svgEl("text", { x: place.x, y: place.y + 30, class: "map-pin__label" });
-      label.textContent = place.name;
+      const circle = U.svgEl("circle", { cx: place.x, cy: place.y, r: 14, class: "map-pin__circle", fill: place.color });
       g.appendChild(halo);
       g.appendChild(circle);
-      g.appendChild(glyph);
+
+      // Inject the shared category icon glyph (white) centered on the pin.
+      const iconName = UI.categoryIconName(place.category);
+      const raw = UI.getIconMarkup(iconName);
+      const iconDoc = new DOMParser().parseFromString(`<svg xmlns="http://www.w3.org/2000/svg">${raw}</svg>`, "image/svg+xml");
+      const scale = 0.62;
+      const iconG = U.svgEl("g", {
+        class: "map-pin__icon",
+        transform: `translate(${place.x - 12 * scale},${place.y - 12 * scale}) scale(${scale})`,
+      });
+      Array.from(iconDoc.documentElement.childNodes).forEach((node) => iconG.appendChild(document.importNode(node, true)));
+      g.appendChild(iconG);
+
+      const label = U.svgEl("text", { x: place.x, y: place.y + 30, class: "map-pin__label" });
+      label.textContent = place.name;
       g.appendChild(label);
       layers[layerName].appendChild(g);
       pinsById[place.id] = place;
@@ -438,16 +434,17 @@
     }
 
     // -------------------------------------------------------------- misc
-    function burstAt(point, emoji) {
-      const g = U.svgEl("text", {
-        x: point.x,
-        y: point.y,
-        class: "map-pin__glyph pop-in",
-        style: "font-size:34px;",
+    function burstAt(point) {
+      const raw = UI.getIconMarkup("check");
+      const doc = new DOMParser().parseFromString(`<svg xmlns="http://www.w3.org/2000/svg">${raw}</svg>`, "image/svg+xml");
+      const scale = 1.5;
+      const g = U.svgEl("g", {
+        class: "map-pin__burst pop-in",
+        transform: `translate(${point.x - 12 * scale},${point.y - 12 * scale}) scale(${scale})`,
       });
-      g.textContent = emoji || "\u2728";
+      Array.from(doc.documentElement.childNodes).forEach((node) => g.appendChild(document.importNode(node, true)));
       layers.animation.appendChild(g);
-      setTimeout(() => g.remove(), 700);
+      setTimeout(() => g.remove(), 900);
     }
 
     return {

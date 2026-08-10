@@ -2,7 +2,7 @@
   "categories": {
     "toilet": { "label": "Toilet", "emoji": "\uD83D\uDEBB", "color": "#4F8EF7", "icon": "toilet" },
     "musala": { "label": "Mushola", "emoji": "\uD83D\uDD4C", "color": "#D4A017", "icon": "musala" },
-    "atm": { "label": "ATM Centre", "emoji": "\uD83C\uDFE7", "color": "#8B5CF6", "icon": "atm" },
+    "atm": { "label": "ATM", "emoji": "\uD83C\uDFE7", "color": "#8B5CF6", "icon": "atm" },
     "lift": { "label": "Lift", "emoji": "\uD83D\uDED7", "color": "#64748B", "icon": "lift" },
     "escalator": { "label": "Eskalator", "emoji": "\u2B06", "color": "#64748B", "icon": "escalator" },
     "nursery": { "label": "Nursery Room", "emoji": "\uD83D\uDC76", "color": "#F472B6", "icon": "entrance" },
